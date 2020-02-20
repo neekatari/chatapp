@@ -1,0 +1,27 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "a chat application build with node mongodb socket.io express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neekatari/chatapp.git"
+  },
+  "author": "Neekatari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neekatari/chatapp/issues"
+  },
+  "homepage": "https://github.com/neekatari/chatapp#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dependable": "^1.1.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-promise-router": "^3.0.3",
+    "lodash": "^4.17.15"
+  }
+}
