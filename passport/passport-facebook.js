@@ -46,9 +46,10 @@
 
 
 
-var LocalStrategy = require('passport-local').Strategy;
+var FacebookStrategy = require('passport-facebook').Strategy;
 var passport = require('passport');
 var User = require('../models/user');
+const secret = require('../secret/secretFile');
 
 passport.serializeUser(function (user, done) {
     done(null, user.id);
@@ -59,53 +60,39 @@ passport.deserializeUser(function (id, done) {
     });
 });
 
-passport.use('local.signup', new LocalStrategy({
-    usernameField: 'email',
-    passwordField: 'password',
+passport.use(new FacebookStrategy({
+    clientID: secret.facebook.clientID,
+    clientSecret: secret.facebook.clientSecret,
+    profileFields: ['email', 'displayName', 'photos'],
+    callbackURL: 'http://localhost:3333/auth/facebook/callback',
     passReqToCallback: true
-}, function (req, email, password, done) {
-    process.nextTick(function () {
-        User.findOne({'email': email}, function (err, user) {
+
+}, function (req,token, refreshToken, profile, done) {
+   
+        User.findOne({facebook:profile.id}, function (err, user) {
             if (err) {
                 return done(err);
             }
             if (user) {
-                return done(null, false, {message: 'Email is already taken.'});
+                return done(null, user);
+            }else {
+                const newUser = new User();
+                newUser.facebook = profile.id;
+                newUser.fullname = profile.displayName;
+                newUser.email = profile._json.email;
+                newUser.userImage = 'https://graph.facebook.com/'+profile.id+'/picture?type=large';
+                newUser.fbTokens.push({token:token});
+
+                newUser.save((err) =>{
+                    return done(null, user);
+                })
             }
-            var newUser = new User();
-            newUser.username = req.body.first_name;
-            
-            newUser.email = req.body.email;
-            newUser.password = newUser.encryptPassword(password);
            
-            newUser.save(function (err, result) {
-                if (err) {
-                    return done(err);
-                }
-                return done(null, newUser);
-            });
+          
         });
-    });
 }));
 
-passport.use('local.login', new LocalStrategy({
-    usernameField: 'email',
-    passwordField: 'password',
-    passReqToCallback: true
-}, function (req, email, password, done) {
-    User.findOne({'email': email}, function (err, user) {
-        if (err) {
-            return done(err);
-        }
-        if (!user) {
-            return done(null, false, {message: 'No user found.'});
-        }
-        if (!user.validUserPassword(password)) {
-            return done(null, false, {message: 'Wrong password.'});
-        }
-        return done(null, user);
-    });
-}));
+
 
 
 

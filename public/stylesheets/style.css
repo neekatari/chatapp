@@ -32,3 +32,12 @@ input:focus{
     outline: none !important;
     border:none !important;
 }
+
+
+.btn-facebook{
+    text-align: center !important;
+    background-color: #4aa1f3;
+    border-radius: 10px;
+    color: #fff;
+
+}
