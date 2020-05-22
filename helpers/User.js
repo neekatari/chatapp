@@ -1,6 +1,6 @@
 module.exports = function(){
     return {
-        SignupValidation: (req, res, next) => {
+        SignUpValidation: (req, res, next) => {
             req.checkBody('username','Username is required').notEmpty();
             req.checkBody('username','Username Must Not Be Less Than 5').isLength({min: 5});
 

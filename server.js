@@ -15,7 +15,7 @@ const passport = require('passport');
 const container = require('./container');
 
 
-container.resolve(function(users, _){
+container.resolve(function(users, _, admin){
 
     mongoose.Promise = global.Promise;
     mongoose.connect('mongodb://localhost/chatapp');
@@ -34,13 +34,16 @@ container.resolve(function(users, _){
         //setup router
         const router = require('express-promise-router')();
         users.SetRouting(router);
-
+        admin.SetRouting(router);
         app.use(router);
     }
 
     
     function ConfigrureExpress(app) {
         require('./passport/passport-local');
+        require('./passport/passport-facebook');
+        require('./passport/passport-google');
+
 
 
         app.use(express.static('public'));
