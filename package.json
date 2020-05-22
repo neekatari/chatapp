@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/neekatari/chatapp#readme",
   "dependencies": {
+    "async": "^3.2.0",
+    "aws-sdk": "^2.627.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
@@ -29,11 +31,17 @@
     "express-session": "^1.17.0",
     "express-validator": "^5.3.1",
     "flash": "^1.1.0",
+    "formidable": "^1.2.2",
+    "jquery": "^3.4.1",
     "lodash": "^4.17.15",
     "mongoose": "^5.9.1",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "mustache": "^4.0.0",
     "passport": "^0.4.1",
     "passport-facebook": "^3.0.0",
     "passport-google-oauth": "^2.0.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "socket.io": "^2.3.0"
   }
 }

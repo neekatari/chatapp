@@ -1,0 +1,130 @@
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hashchat - Search</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../assets/media/image/favicon.png"/>
+
+    <!-- Plugin styles -->
+    <link rel="stylesheet" href="../../vendors/bundle.css" type="text/css">
+
+        <!-- Lightbox -->
+    <link rel="stylesheet" href="../../vendors/lightbox/magnific-popup.css" type="text/css">
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="../../assets/css/app.min.css" type="text/css">
+</head>
+<body  class="dark">
+    <div class="preloader">
+   
+    </div>
+    <%- include ('partials/navbar.ejs') %>
+
+   
+    <!-- begin::main-content -->
+    <div id="main">
+    <div class="main-content" style="margin:0px;">
+    <div class="row" >
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card border-0 py-5" data-backround-image="../../assets/media/image/image1.jpg">
+                                <div class="container">
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-md-6">
+                                            <h2 class="mb-4 text-center">Find The Community On Hashchat</h2>
+                                            <form>
+                                                <div class="input-group input-group-lg mb-3">
+                                                    <input type="text" class="form-control"
+                                                           aria-label="Example text with button addon"
+                                                           placeholder="Search..." autofocus
+                                                           aria-describedby="button-addon1">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-primary" type="button"
+                                                                id="button-addon1">
+                                                            <i class="fa fa-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="mb-5">
+                               Room list 
+                                
+                            </h4>
+
+                            
+                            <div class="card-columns">
+                                <% _.forEach(data, function(val){ %>
+                                <div class="card">
+                                    <img src="https://hashchatapp.s3.amazonaws.com/<%= val.image %>" class="card-img-top" alt="image">
+                                    <div class="card-body">
+                                        <p class="card-text"><%= val.name %><a href="/room/<%= val.name%>" class="btn btn-secondary float-right" style="border-radius: 0px;"><i class="fa fa-plus-circle"></i>&nbsp; Join</a></p>
+                                        <!-- <p class="card-text"><%= val.description %></p> -->
+                                        
+                                    </div>
+                                </div>
+                                <% }) %>
+                               
+        
+                                
+        
+                            </div>
+                          
+                        
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- begin::footer -->
+    <footer>
+        <div class="container-fluid">
+            <div>© 2020 Primex - <a href="http://laborasyon.com/" target="_blank">Laborasyon</a></div>
+            <div>
+                <nav class="nav">
+                    <a href="https://themeforest.net/licenses/standard" class="nav-link">Licenses</a>
+                    <a href="#" class="nav-link">Change Log</a>
+                    <a href="#" class="nav-link">Get Help</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <!-- end::footer -->
+
+    </div>
+
+    <!-- end::main-content -->
+
+    </div>
+</body>
+<!-- end::main -->
+
+<!-- Plugin scripts -->
+<script src="../../vendors/bundle.js"></script>
+
+    <!-- lightbox -->
+    <script src="../../vendors/lightbox/jquery.magnific-popup.min.js"></script>
+    <script src="../../assets/js/examples/lightbox.js"></script>
+
+<!-- App scripts -->
+<script src="../../assets/js/app.min.js"></script>
+

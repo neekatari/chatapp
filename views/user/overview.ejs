@@ -1,0 +1,646 @@
+<link rel="shortcut icon" href="../../assets/media/image/favicon.png"/>
+
+    <!-- Plugin styles -->
+    <link rel="stylesheet" href="../../vendors/bundle.css" type="text/css">
+
+    
+    <!-- App styles -->
+    <link rel="stylesheet" href="../../assets/css/app.min.css" type="text/css">
+<body  class="dark">
+
+<!-- begin::preloader-->
+<div class="preloader">
+    <div class="preloader-icon"></div>
+</div>
+<!-- end::preloader -->
+
+<%- include ('../partials/navbar.ejs') %>
+<!-- end::header -->
+
+<!-- begin::main -->
+<div id="main">
+
+    <!-- begin::navigation -->
+   
+    <!-- end::navigation -->
+
+    <!--<div class="horizontal-navigation">
+            <ul>
+                <li>
+                    <a  href="#">
+                        <i class="nav-icon" data-feather="bar-chart-2"></i> Dashboards
+                    </a>
+                    <ul>
+                        <li>
+                            <a  href="dashboards-one.html">Ecommerce</a></li>
+                        <li>
+                            <a  href="dashboards-two.html">Analytics</a></li>
+                        <li>
+                            <a  href="dashboards-three.html">Projects</a></li>
+                        <li>
+                            <a  href="dashboards-widget.html">Widgets</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a  href="#">
+                        <i class="nav-icon" data-feather="command"></i> Apps  <span class="badge badge-danger">New</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a  href="apps-chat.html">
+                                <span>Chat</span>
+                                <span class="badge badge-danger">5</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="apps-inbox.html">
+                                <span>Mail</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="apps-todo.html">
+                                <span>Todo</span>
+                                <span class="badge badge-warning">2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="apps-file-manager.html">
+                                <span>File Manager</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="apps-calendar.html">
+                                <span>Calendar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="nav-icon" data-feather="layers"></i> UI Elements
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">Basic</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-basic-alert.html">Alerts</a></li>
+                                <li>
+                                    <a  href="elements-basic-accordion.html">Accordion</a></li>
+                                <li>
+                                    <a  href="elements-basic-buttons.html">Buttons</a></li>
+                                <li>
+                                    <a  href="elements-basic-dropdown.html">Dropdown</a></li>
+                                <li>
+                                    <a  href="elements-basic-list-group.html">List Group</a></li>
+                                <li>
+                                    <a  href="elements-basic-pagination.html">Pagination</a></li>
+                                <li>
+                                    <a  href="elements-basic-typography.html">Typography</a></li>
+                                <li>
+                                    <a  href="elements-basic-media-object.html">Media Object</a></li>
+                                <li>
+                                    <a  href="elements-basic-progress.html">Progress</a></li>
+                                <li>
+                                    <a  href="elements-basic-modal.html">Modal</a></li>
+                                <li>
+                                    <a  href="elements-basic-spinners.html">Spinners</a></li>
+                                <li>
+                                    <a  href="elements-basic-navs.html">Navs</a></li>
+                                <li>
+                                    <a  href="elements-basic-tab.html">Tab</a></li>
+                                <li>
+                                    <a  href="elements-basic-tooltip.html">Tooltip</a></li>
+                                <li>
+                                    <a  href="elements-basic-popovers.html">Popovers</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Cards</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-card-basic.html">Basic Cards </a></li>
+                                <li>
+                                    <a  href="elements-card-image.html">Image Cards </a></li>
+                                <li>
+                                    <a  href="elements-card-scroll.html">Card Scroll </a></li>
+                                <li>
+                                    <a  href="elements-card-other.html">Others </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a  href="elements-avatar.html">Avatar</a></li>
+                        <li>
+                            <a  href="elements-icons.html">Icons</a></li>
+                        <li>
+                            <a  href="elements-colors.html">Colors</a></li>
+                        <li>
+                            <a href="#">Plugins</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-plugin-sweet-alert.html">Sweet Alert</a></li>
+                                <li>
+                                    <a  href="elements-plugin-lightbox.html">Lightbox</a></li>
+                                <li>
+                                    <a  href="elements-plugin-toast.html">Toast</a></li>
+                                <li>
+                                    <a  href="elements-plugin-tour.html">Tour</a></li>
+                                <li>
+                                    <a  href="elements-plugin-slick-slide.html">Slick Slide</a></li>
+                                <li>
+                                    <a  href="elements-plugin-nestable.html">Nestable</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Forms</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-form-basic.html">Form Layouts</a></li>
+                                <li>
+                                    <a  href="elements-form-custom.html">Custom Forms</a></li>
+                                <li>
+                                    <a  href="elements-form-advanced.html">Advanced Form</a></li>
+                                <li>
+                                    <a  href="elements-form-validation.html">Validation</a></li>
+                                <li>
+                                    <a  href="elements-form-wizard.html">Wizard</a></li>
+                                <li>
+                                    <a  href="elements-form-file-upload.html">File Upload</a></li>
+                                <li>
+                                    <a  href="elements-form-datepicker.html">Datepicker</a></li>
+                                <li>
+                                    <a  href="elements-form-timepicker.html">Timepicker</a></li>
+                                <li>
+                                    <a  href="elements-form-colorpicker.html">Colorpicker</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Tables</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-table-basic.html">Basic Tables</a></li>
+                                <li>
+                                    <a  href="elements-table-datatable.html">Datatable</a></li>
+                                <li>
+                                    <a  href="elements-table-responsive.html">Responsive Tables</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Charts</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-chart-apexchart.html">Apex</a></li>
+                                <li>
+                                    <a  href="elements-chart-chartjs.html">Chartjs</a></li>
+                                <li>
+                                    <a  href="elements-chart-justgage.html">Justgage</a></li>
+                                <li>
+                                    <a  href="elements-chart-morsis.html">Morsis</a></li>
+                                <li>
+                                    <a  href="elements-chart-peity.html">Peity</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Maps</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-map-google.html">Google</a></li>
+                                <li>
+                                    <a  href="elements-map-vector.html">Vector</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="nav-icon" data-feather="copy"></i> Pages
+                    </a>
+                    <ul>
+                        <li><a href="pages-login.html" target="_blank">Login</a></li>
+                        <li><a href="pages-register.html" target="_blank">Register</a></li>
+                        <li><a href="pages-recovery-password.html" target="_blank">Recovery Password</a></li>
+                        <li><a href="pages-lock-screen.html" target="_blank">Lock Screen</a></li>
+                        <li>
+                            <a  class="active"
+                                href="pages-profile.html">Profile</a></li>
+                        <li>
+                            <a  href="pages-timeline.html">Timeline</a></li>
+                        <li>
+                            <a  href="pages-invoice.html">Invoice</a></li>
+
+                        <li>
+                            <a  href="pages-pricing-table.html">Pricing Table</a></li>
+
+                        <li>
+                            <a  href="pages-pricing-table.html-2">Pricing Table 2</a></li>
+                        <li>
+                            <a  href="pages-search-result.html">Search Result</a></li>
+                        <li>
+                            <a  href="pages-mailing.html">Mailing</a></li>
+                        <li>
+                            <a href="#">Error Pages</a>
+                            <ul>
+                                <li><a href="pages-errors-404.html" target="_blank">404</a></li>
+                                <li><a href="pages-errors-503.html" target="_blank">503</a></li>
+                                <li><a href="pages-errors-mean-at-work.html" target="_blank">Mean at Work</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a  href="pages-blank-page-1.html">Starter Pages</a>
+                            <ul>
+                                <li>
+                                    <a  href="pages-blank-page-1.html">Layout 1</a></li>
+                                <li>
+                                    <a  href="pages-blank-page-2.html">Layout 2</a></li>
+                                <li>
+                                    <a  href="pages-blank-page-3.html">Layout 3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Menu Level</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Menu Level</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Menu Level </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div> -->
+
+    <!-- begin::main-content -->
+    <div class="main-content">
+
+    
+    
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="col-md-4">
+
+                    <div class="card">
+                        <img src="../../assets/media/image/image1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center m-t-70-minus">
+                            <figure class="avatar avatar-xl m-b-20">
+                                
+                                <img src="https://hashchatapp.s3.amazonaws.com/<%= user.userImage%>" class="rounded-circle" alt="...">
+                            </figure>
+                            <h5><%= data.username%></h5>
+                            
+                            <p><b>Email : </b><%= data.email%></p>
+                            
+                        </div>
+                        <hr class="m-0">
+                        <div class="card-body">
+                            <div class="row text-center">
+                                <div class="col-6 text-info">
+                                    <h4 class="font-weight-bold"><%= data.friendList.length%></h4>
+                                    <span>Total Friends</span>
+                                </div>
+                                <div class="col-6 text-success">
+                                    <h4 class="font-weight-bold"><%= rooms.length%></h4>
+                                    <span>Total Created Rooms</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                   
+
+                    <!-- <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title d-flex justify-content-between align-items-center">
+                                Photos
+                                <a href="#" class="btn btn-outline-light btn-sm">
+                                    <i data-feather="upload" class="mr-2"></i> Upload
+                                </a>
+                            </h6>
+                            <div class="row row-xs">
+                                <div class="col-lg-4 mb-3">
+                                    <img class="img-fluid rounded" src="../../assets/media/image/portfolio-one.jpg"
+                                         alt="image">
+                                </div>
+                                <div class="col-lg-4 mb-3">
+                                    <img class="img-fluid rounded" src="../../assets/media/image/portfolio-two.jpg"
+                                         alt="image">
+                                </div>
+                                <div class="col-lg-4 mb-3">
+                                    <img class="img-fluid rounded" src="../../assets/media/image/portfolio-three.jpg"
+                                         alt="image">
+                                </div>
+                                <div class="col-lg-4 mb-3">
+                                    <img class="img-fluid rounded" src="../../assets/media/image/portfolio-four.jpg"
+                                         alt="image">
+                                </div>
+                                <div class="col-lg-4 mb-3">
+                                    <img class="img-fluid rounded" src="../../assets/media/image/portfolio-five.jpg"
+                                         alt="image">
+                                </div>
+                                <div class="col-lg-4 mb-3">
+                                    <img class="img-fluid rounded" src="../../assets/media/image/portfolio-six.jpg"
+                                         alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                   
+
+                </div>
+                <div class="col-md-8">
+
+                  
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="nav nav-pills flex-column flex-sm-row" id="myTab" role="tablist">
+                                <li class="flex-sm-fill text-sm-center nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home"
+                                       role="tab" aria-selected="true">Friend List</a>
+                                </li>
+                                <li class="flex-sm-fill text-sm-center nav-item">
+                                    <a class="nav-link" id="timeline-tab" data-toggle="tab" href="#timeline"
+                                       role="tab" aria-selected="true">Profile</a>
+                                </li>
+                                <li class="flex-sm-fill text-sm-center nav-item">
+                                    <a class="nav-link" id="connections-tab1" data-toggle="tab" href="#connections"
+                                       role="tab"
+                                       aria-selected="false">
+                                        Rooms <span class="badge badge-light m-l-5"><%= rooms.length%></span>
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Connections</h6>
+                                    <div class="row">
+                                       
+                                            <% _.forEach(friends.friendList, function(val){ %>
+
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="card border">
+                                                <div class="card-body p-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <div>
+                                                            <figure class="avatar mr-3">
+                                                                <img src="https://hashchatapp.s3.amazonaws.com/<%= val.friendId.userImage%>"
+                                                                     class="rounded-circle" alt="...">
+                                                            </figure>
+                                                        </div>
+                                                        <div>
+                                                            <p class="mb-0"><%= val.friendName%></p>
+                                                           
+                                                        </div>
+                                                        <a href="#" class="ml-auto" title="Add Friend"
+                                                           data-toggle="tooltip">
+                                                            <i class="fa fa-user-plus"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <% }) %> 
+                                       
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show" id="timeline" role="tabpanel">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Timeline</h6>
+                                    <div class="timeline">
+                                        <div class="timeline-item">
+                                            <div>
+                                                <a href="#">
+                                                    <figure class="avatar avatar-sm mr-3 bring-forward">
+                                                        <img src="../../assets/media/image/user/women_avatar4.jpg"
+                                                             class="rounded-circle" alt="image">
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <h6 class="d-flex justify-content-between mb-4">
+                                            <span>
+                                                <a href="#">Martina Ash</a> shared a link
+                                            </span>
+                                                    <span class="text-muted font-weight-normal">Tue 8:17pm</span>
+                                                </h6>
+                                                <a href="#">
+                                                    <div class="mb-3 border border-radius-1">
+                                                        <div class="row no-gutters">
+                                                            <div class="col-2">
+                                                                <img src="../../assets/media/image/photo6.jpg" class="w-100"
+                                                                     alt="image">
+                                                            </div>
+                                                            <div class="col-10 p-3">
+                                                                <h5 class="line-height-16">Connection title</h5>
+                                                                Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                elit. Facilis, voluptatibus.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div>
+                                                <figure class="avatar avatar-sm mr-3 bring-forward">
+                                                    <span class="avatar-title bg-success-bright text-success rounded-circle">C</span>
+                                                </figure>
+                                            </div>
+                                            <div>
+                                                <h6 class="d-flex justify-content-between mb-4">
+                                            <span>
+                                                <a href="#">Jonny Richie</a> shared a post
+                                            </span>
+                                                    <span class="text-muted font-weight-normal">Tue 8:17pm</span>
+                                                </h6>
+                                                <a href="#">
+                                                    <div class="mb-3 border p-3 border-radius-1">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                                                        aliquid aperiam commodi culpa debitis deserunt enim itaque
+                                                        laborum minima neque nostrum pariatur perspiciatis, placeat
+                                                        quidem, ratione recusandae reiciendis sapiente, ut veritatis
+                                                        vitae. Beatae dolore hic odio! Esse officiis quidem voluptate.
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div>
+                                                <figure class="avatar avatar-sm mr-3 bring-forward">
+                                                    <span class="avatar-title bg-info-bright text-info rounded-circle">K</span>
+                                                </figure>
+                                            </div>
+                                            <div>
+                                                <h6 class="d-flex justify-content-between mb-4">
+                                            <span>
+                                                <a href="#">Jonny Richie</a> attached file
+                                            </span>
+                                                    <span class="text-muted font-weight-normal">Tue 8:17pm</span>
+                                                </h6>
+                                                <a href="#">
+                                                    <div class="mb-3 border p-3 border-radius-1">
+                                                        <i class="fa fa-file-pdf-o mr-2"></i> filename12334.pdf
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div>
+                                                <figure class="avatar avatar-sm mr-3 bring-forward">
+                                            <span class="avatar-title bg-warning-bright text-warning rounded-circle">
+                                                <i class="ti-image"></i>
+                                            </span>
+                                                </figure>
+                                            </div>
+                                            <div>
+                                                <h6 class="d-flex justify-content-between mb-4">
+                                            <span>
+                                                <a href="#">Jonny Richie</a> shared files
+                                            </span>
+                                                    <span class="text-muted font-weight-normal">Tue 8:17pm</span>
+                                                </h6>
+                                                <div class="row row-xs">
+                                                    <div class="col-xl-3 col-lg-4 col-md-6">
+                                                        <figure>
+                                                            <img src="../../assets/media/image/portfolio-five.jpg"
+                                                                 class="w-100 border-radius-1" alt="image">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6">
+                                                        <figure>
+                                                            <img src="../../assets/media/image/portfolio-one.jpg"
+                                                                 class="w-100 border-radius-1" alt="image">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6">
+                                                        <figure>
+                                                            <img src="../../assets/media/image/portfolio-three.jpg"
+                                                                 class="w-100 border-radius-1" alt="image">
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div>
+                                                <figure class="avatar avatar-sm mr-3 bring-forward">
+                                                    <span class="avatar-title bg-youtube rounded-circle">Y</span>
+                                                </figure>
+                                            </div>
+                                            <div>
+                                                <h6 class="d-flex justify-content-between">
+                                           <span>
+                                               <a href="#">Jonny Richie</a> shared video
+                                           </span>
+                                                    <span class="text-muted font-weight-normal">Tue 8:17pm</span>
+                                                </h6>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+                                                    placeat.</p>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="embed-responsive embed-responsive-16by9 m-t-b-5">
+                                                            <iframe class="embed-responsive-item"
+                                                                    src="https://www.youtube.com/embed/l-epKcOA7RQ"
+                                                                    allowfullscreen></iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="connections" role="tabpanel">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Connections</h6>
+                                    <div class="row">
+                                        <% _.forEach(rooms, function(val){ %>
+
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="card border">
+                                                <div class="card-body p-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <div>
+                                                            <figure class="avatar mr-3">
+                                                                <img src="https://hashchatapp.s3.amazonaws.com/<%= val.image%>"
+                                                                class="rounded-circle" alt="...">
+                                                            </figure>
+                                                        </div>
+                                                        <div>
+                                                            <p class="mb-0"><%= val.name%></p>
+                                                            
+                                                        </div>
+                                                        <a href="#" class="ml-auto" title="Message"
+                                                           data-toggle="tooltip">
+                                                            <i data-feather="message-circle"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <% }) %> 
+                                        
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- begin::footer -->
+    <footer>
+        <div class="container-fluid">
+            <div>© 2020 Primex - <a href="http://laborasyon.com/" target="_blank">Laborasyon</a></div>
+            <div>
+                <nav class="nav">
+                    <a href="https://themeforest.net/licenses/standard" class="nav-link">Licenses</a>
+                    <a href="#" class="nav-link">Change Log</a>
+                    <a href="#" class="nav-link">Get Help</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <!-- end::footer -->
+
+    </div>
+    <!-- end::main-content -->
+
+</div>
+<!-- end::main -->
+
+<!-- Plugin scripts -->
+<script src="../../vendors/bundle.js"></script>
+
+
+<!-- App scripts -->
+<script src="../../assets/js/app.min.js"></script>
+
+</body>
+
+

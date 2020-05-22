@@ -1,0 +1,276 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+<div class="header">
+
+    <div class="header-left">
+        <div class="navigation-toggler">
+            <a href="#" data-action="navigation-toggler">
+                <i data-feather="menu"></i>
+            </a>
+        </div>
+        <div class="header-logo">
+            <a href=index-2.html>
+                <img class="logo" src="../HLOGO.jpg" alt="logo">
+                <img class="logo-light" src="../HLOGO.png" alt="light logo" height="50" width="50"> &nbsp;&nbsp; <p style="font-size: 22px; margin-top: 20px;">Hashchat</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="header-body">
+        <div class="header-body-left">
+            <div class="page-title">
+                <h4>Dashboard</h4>
+            </div>
+        </div>
+        <div class="header-body-right">
+            <ul class="navbar-nav">
+
+               
+
+                <!-- begin::header fullscreen -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link" title="Fullscreen" data-toggle="fullscreen">
+                        <i class="maximize" data-feather="maximize"></i>
+                        <i class="minimize" data-feather="minimize"></i>
+                    </a>
+                </li>
+                <!-- end::header fullscreen -->
+
+                <!-- begin::header search -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link" title="Search" data-toggle="dropdown">
+                        <i data-feather="search"></i>
+                    </a>
+                    <div class="dropdown-menu p-2 dropdown-menu-right">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <div class="input-group-prepend">
+                                    <button class="btn" type="button">
+                                        <i data-feather="search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+              
+               
+                <!-- end::header messages dropdown -->
+
+                <!-- begin::header notification dropdown -->
+                <li class="nav-item dropdown">
+                    <% if(data.totalRequest > 0 ){ %>
+                        <a href="#" class="nav-link nav-link-notify" title="Notifications" data-toggle="dropdown">
+                          
+                            <i data-feather="bell"></i>
+                           
+                        </a>
+                    <%} else { %>
+                        <a href="#" class="nav-link" title="Notifications" data-toggle="dropdown">  
+                            <i data-feather="bell"></i>
+                           
+                        </a>
+                    <% }%>
+                    
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-big" id="reload">
+                        <div class="bg-dark p-4 text-center d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Notifications</h5>
+                            <small class="font-size-11 opacity-7"><%= data.totalRequest %> unread notifications</small>
+                        </div>
+                        <div>
+                            <ul class="list-group list-group-flush">
+                                <% if(data.totalRequest > 0 ){ %>
+                                    <%  _.forEach(data.request, function(val) { %>
+                                <li>
+                                    <a href="#" class="list-group-item d-flex align-items-center hide-show-toggler">
+                                        <div>
+                                            <figure class="avatar mr-2">
+                                                
+                                                <img src="/<%= data.userImage%>" style="border-radius: 100%;"/>
+                                              
+                                            </figure>
+                                        </div>
+                                        <div class="flex-grow-1 " style="display: inline-block;">
+                                            <p class="mb-0 line-height-20 d-flex justify-content-between">
+                                               <%= val.username %>
+                                               
+                                            </p>
+                                           <div style="margin-top: 10px;">
+                                                <input type="hidden" name="senderId" id="senderId" value="<%= val.userId._id %>">
+                                                <input type="hidden" name="senderName" id="senderName" value="<%= val.username%>">
+                                                <button id="accept_friend" class="btn btn-primary" style="padding: 5px 10px;border-radius:0px "><i class="fa fa-check"></i> Accept</button>
+                                                
+                                                
+                                                <input type="hidden" name="user_Id" id="user_Id" value="<%= val.userId._id %>">
+                                                <button id="cancel_friend" class="btn btn-dark" style="padding: 5px 10px; border-radius:0px; margin-left: 10px;" ><i class="fa fa-times"></i> Cancel</button>
+                                            </div>
+                                            
+                                            <!-- <span class="text-muted small">20 min ago</span> -->
+                                        </div>
+                                    </a>
+                                </li>
+                                    <% })%>
+                                <% } else {%>
+                                    <div class="text-center" style="padding: 20px;">
+                                        <i class="fa fa-empty-set"style="font-size:50px;"></i>
+                                    <p>No friend Request</p>
+                                </div>
+                                <% } %>
+
+                            </ul>
+                        </div>
+                        <div class="p-2 text-right border-top">
+                            <ul class="list-inline small">
+                                <li class="list-inline-item mb-0">
+                                    <a href="#">Mark All Read</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- end::header notification dropdown -->
+
+                <!-- begin::settings -->
+               
+                <!-- end::settings -->
+
+                <!-- begin::user menu -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link" title="User menu" data-toggle="dropdown" aria-expanded="false">
+                        <span class="mr-2 d-sm-inline d-none"><%= user.fullname || user.username %></span>
+                        <figure class="avatar avatar-sm">
+                            <img src="<%= user.userImage %>" class="rounded-circle"
+                                 alt="avatar">
+                        </figure>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="/settings/profile" class="dropdown-item">Profile</a>
+                       
+                        <a href="/logout" class="dropdown-item text-danger" data-sidebar-target="#settings">Sign Out!</a>
+                    </div>
+                </li>
+                <!-- end::user menu -->
+
+            </ul>
+
+            <!-- begin::mobile header toggler -->
+            <ul class="navbar-nav d-flex align-items-center">
+                <li class="nav-item header-toggler">
+                    <a href="#" class="nav-link">
+                        <i data-feather="arrow-down"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- end::mobile header toggler -->
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="navigation">
+    <div class="navigation-menu-tab">
+        <div class="flex-grow-1">
+            <ul>
+                <li>
+                    <a  class="active"
+                        href="/home" data-toggle="tooltip" data-placement="right" title="Dashboards"
+                       data-nav-target="#dashboards">
+                        <i data-feather="bar-chart-2"></i>
+                    </a>
+                </li>
+                 <li>
+                    <a  href="/search" data-toggle="tooltip"
+                       data-placement="right" title="Search" data-nav-target="">
+                        <i data-feather="search"></i>
+                    </a>
+                </li>
+                <!--<li>
+                    <a  href="#" data-toggle="tooltip"
+                       data-placement="right" title="UI Elements"
+                       data-nav-target="#elements">
+                        <i data-feather="layers"></i>
+                    </a>
+                </li>
+                <li>
+                    <a  href="#" data-toggle="tooltip"
+                       data-placement="right" title="Pages" data-nav-target="#pages">
+                        <i data-feather="copy"></i>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="right" title="Dark mode">
+                        <i data-feather="moon"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="pages-login.html" data-toggle="tooltip" data-placement="right" title="Logout"
+                       target="_blank">
+                        <i data-feather="log-out"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+     <div class="navigation-menu-body">
+        <div class="navigation-menu-group">
+
+            <div  class="open"
+                  id="dashboards">
+                <ul>
+                    <li class="navigation-divider">Room List</li>
+                
+                </ul>
+
+
+
+                    <ul class="list-group list-group-flush">
+                        
+                    
+
+
+                        <% if(first.length > 0){ %>
+
+                        <li>
+                        <div class="list-group list-group-flush">
+                            
+                    <% _.forEach(first, function(val){ %>
+                    
+                        
+                            <a href="/room/<%= val.name%>" class="list-group-item d-flex align-items-center">
+                                <div>
+                                    <div class="avatar avatar-sm m-r-10">
+                                        <img src="https://hashchatapp.s3.amazonaws.com/<%= val.image %>"
+                                             class="rounded-circle" alt="image">
+                                    </div>
+                                </div>
+                                <span><%= val.name %></span>
+                            </a>
+                        
+                    
+                    <% }) %>
+                </div></li>
+                <% } else {%>
+                   <li style="font-size: 60px;" class="text-center"><i class="fa fa-long-arrow-right"></i></li>  
+                <% } %>
+                </ul>
+            </div>
+
+
+        </div>
+    </div> 
+</div>
+  
+<script src="../../assets/js/app.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/room/roomchat.js"></script>
+<script src="/js/room/sendrequest.js"></script>
+
+
+

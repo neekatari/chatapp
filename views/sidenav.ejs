@@ -1,0 +1,361 @@
+<div class="navigation">
+    <div class="navigation-menu-tab">
+        <div class="flex-grow-1">
+            <ul>
+                <li>
+                    <a  class="active"
+                        href="#" data-toggle="tooltip" data-placement="right" title="Dashboards"
+                       data-nav-target="#dashboards">
+                        <i data-feather="bar-chart-2"></i>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a  href="#" data-toggle="tooltip"
+                       data-placement="right" title="Chats" data-nav-target="#apps">
+                        <i data-feather="mail"></i>
+                    </a>
+                </li>
+                <li>
+                    <a  href="#" data-toggle="tooltip"
+                       data-placement="right" title="UI Elements"
+                       data-nav-target="#elements">
+                        <i data-feather="layers"></i>
+                    </a>
+                </li>
+                <li>
+                    <a  href="#" data-toggle="tooltip"
+                       data-placement="right" title="Pages" data-nav-target="#pages">
+                        <i data-feather="copy"></i>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="right" title="Dark mode">
+                        <i data-feather="moon"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="pages-login.html" data-toggle="tooltip" data-placement="right" title="Logout"
+                       target="_blank">
+                        <i data-feather="log-out"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+     <div class="navigation-menu-body">
+        <div class="navigation-menu-group">
+
+            <div  class="open"
+                  id="dashboards">
+                <ul>
+                    <li class="navigation-divider">Room List</li>
+                </ul>
+
+
+
+                    <ul class="list-group list-group-flush">
+                        
+                    
+
+
+
+                        <li>
+                        <div class="list-group list-group-flush">
+                    <% _.forEach(first, function(val){ %>
+                    
+                        
+                            <a href="#" class="list-group-item d-flex align-items-center">
+                                <div>
+                                    <div class="avatar avatar-sm m-r-10">
+                                        <img src="https://hashchatapp.s3.amazonaws.com/<%= val.image %>"
+                                             class="rounded-circle" alt="image">
+                                    </div>
+                                </div>
+                                <span><%= val.name %></span>
+                            </a>
+                        
+                    
+                    <% }) %>
+                </div></li>
+                </ul>
+            </div>
+            <div  id="apps">
+                <ul>
+                    <li class="navigation-divider">Web Apps</li>
+                    <li>
+                        <a  href="apps-chat.html">
+                            <span>Chat</span>
+                            <span class="badge badge-danger">5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="apps-inbox.html">
+                            <span>Mail</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="apps-todo.html">
+                            <span>Todo</span>
+                            <span class="badge badge-warning">2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="apps-file-manager.html">
+                            <span>File Manager</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="apps-calendar.html">
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+                    <li class="navigation-divider">Recent Contacts</li>
+                    <li>
+                        <div class="list-group list-group-flush">
+                            <a href="#" class="list-group-item d-flex align-items-center">
+                                <div>
+                                    <div class="avatar avatar-sm m-r-10">
+                                        <img src="../../assets/media/image/user/man_avatar1.jpg"
+                                             class="rounded-circle" alt="image">
+                                    </div>
+                                </div>
+                                <span>Valentine Maton</span>
+                            </a>
+                            <a href="#" class="list-group-item d-flex align-items-center">
+                                <div>
+                                    <div class="avatar avatar-sm m-r-10">
+                                        <img src="../../assets/media/image/user/women_avatar2.jpg"
+                                             class="rounded-circle" alt="image">
+                                    </div>
+                                </div>
+                                <span>Holmes Cherryman</span>
+                            </a>
+                            <a href="#" class="list-group-item d-flex align-items-center">
+                                <div>
+                                    <div class="avatar avatar-sm m-r-10">
+                                        <img src="../../assets/media/image/user/women_avatar4.jpg"
+                                             class="rounded-circle" alt="image">
+                                    </div>
+                                </div>
+                                <span>Kenneth Hune</span>
+                            </a>
+                            <a href="#" class="list-group-item d-flex align-items-center">
+                                <div>
+                                    <div class="avatar avatar-sm m-r-10">
+                                        <img src="../../assets/media/image/user/women_avatar3.jpg"
+                                             class="rounded-circle" alt="image">
+                                    </div>
+                                </div>
+                                <span>Holmes Cherryman</span>
+                            </a>
+                            <a href="#" class="list-group-item d-flex align-items-center">
+                                <div>
+                                    <div class="avatar avatar-sm m-r-10">
+                                        <img src="../../assets/media/image/user/women_avatar5.jpg"
+                                             class="rounded-circle" alt="image">
+                                    </div>
+                                </div>
+                                <span>Kenneth Hune</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div  id="elements">
+                <ul>
+                    <li class="navigation-divider">UI Elements</li>
+                    <li>
+                        <a href="#">Basic</a>
+                        <ul>
+                            <li>
+                                <a  href="elements-basic-alert.html">Alerts</a></li>
+                            <li>
+                                <a  href="elements-basic-accordion.html">Accordion</a></li>
+                            <li>
+                                <a  href="elements-basic-buttons.html">Buttons</a></li>
+                            <li>
+                                <a  href="elements-basic-dropdown.html">Dropdown</a></li>
+                            <li>
+                                <a  href="elements-basic-list-group.html">List Group</a></li>
+                            <li>
+                                <a  href="elements-basic-pagination.html">Pagination</a></li>
+                            <li>
+                                <a  href="elements-basic-typography.html">Typography</a></li>
+                            <li>
+                                <a  href="elements-basic-media-object.html">Media Object</a></li>
+                            <li>
+                                <a  href="elements-basic-progress.html">Progress</a></li>
+                            <li>
+                                <a  href="elements-basic-modal.html">Modal</a></li>
+                            <li>
+                                <a  href="elements-basic-spinners.html">Spinners</a></li>
+                            <li>
+                                <a  href="elements-basic-navs.html">Navs</a></li>
+                            <li>
+                                <a  href="elements-basic-tab.html">Tab</a></li>
+                            <li>
+                                <a  href="elements-basic-tooltip.html">Tooltip</a></li>
+                            <li>
+                                <a  href="elements-basic-popovers.html">Popovers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Cards</a>
+                        <ul>
+                            <li>
+                                <a  href="elements-card-basic.html">Basic Cards </a></li>
+                            <li>
+                                <a  href="elements-card-image.html">Image Cards </a></li>
+                            <li>
+                                <a  href="elements-card-scroll.html">Card Scroll </a></li>
+                            <li>
+                                <a  href="elements-card-other.html">Others </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a  href="elements-avatar.html">Avatar</a></li>
+                    <li>
+                        <a  href="elements-icons.html">Icons</a></li>
+                    <li>
+                        <a  href="elements-colors.html">Colors</a></li>
+                    <li>
+                        <a href="#">Plugins</a>
+                        <ul>
+                            <li>
+                                <a  href="elements-plugin-sweet-alert.html">Sweet Alert</a></li>
+                            <li>
+                                <a  href="elements-plugin-lightbox.html">Lightbox</a></li>
+                            <li>
+                                <a  href="elements-plugin-toast.html">Toast</a></li>
+                            <li>
+                                <a  href="elements-plugin-tour.html">Tour</a></li>
+                            <li>
+                                <a  href="elements-plugin-slick-slide.html">Slick Slide</a></li>
+                            <li>
+                                <a  href="elements-plugin-nestable.html">Nestable</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Forms</a>
+                        <ul>
+                            <li>
+                                <a  href="elements-form-basic.html">Form Layouts</a></li>
+                            <li>
+                                <a  href="elements-form-custom.html">Custom Forms</a></li>
+                            <li>
+                                <a  href="elements-form-advanced.html">Advanced Form</a></li>
+                            <li>
+                                <a  href="elements-form-validation.html">Validation</a></li>
+                            <li>
+                                <a  href="elements-form-wizard.html">Wizard</a></li>
+                            <li>
+                                <a  href="elements-form-file-upload.html">File Upload</a></li>
+                            <li>
+                                <a  href="elements-form-datepicker.html">Datepicker</a></li>
+                            <li>
+                                <a  href="elements-form-timepicker.html">Timepicker</a></li>
+                            <li>
+                                <a  href="elements-form-colorpicker.html">Colorpicker</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Tables</a>
+                        <ul>
+                            <li>
+                                <a  href="elements-table-basic.html">Basic Tables</a></li>
+                            <li>
+                                <a  href="elements-table-datatable.html">Datatable</a></li>
+                            <li>
+                                <a  href="elements-table-responsive.html">Responsive Tables</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Charts</a>
+                        <ul>
+                            <li>
+                                <a  href="elements-chart-apexchart.html">Apex</a></li>
+                            <li>
+                                <a  href="elements-chart-chartjs.html">Chartjs</a></li>
+                            <li>
+                                <a  href="elements-chart-justgage.html">Justgage</a></li>
+                            <li>
+                                <a  href="elements-chart-morsis.html">Morsis</a></li>
+                            <li>
+                                <a  href="elements-chart-peity.html">Peity</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Maps</a>
+                        <ul>
+                            <li>
+                                <a  href="elements-map-google.html">Google</a></li>
+                            <li>
+                                <a  href="elements-map-vector.html">Vector</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div  id="pages">
+                <ul>
+                    <li class="navigation-divider">Pages</li>
+                    <li><a href="pages-login.html" target="_blank">Login</a></li>
+                    <li><a href="pages-register.html" target="_blank">Register</a></li>
+                    <li><a href="pages-recovery-password.html" target="_blank">Recovery Password</a></li>
+                    <li><a href="pages-lock-screen.html" target="_blank">Lock Screen</a></li>
+                    <li>
+                        <a  href="pages-profile.html">Profile</a></li>
+                    <li>
+                        <a  href="pages-timeline.html">Timeline</a></li>
+                    <li>
+                        <a  href="pages-invoice.html">Invoice</a></li>
+
+                    <li>
+                        <a  href="pages-pricing-table.html">Pricing Table</a></li>
+
+                    <li>
+                        <a  href="pages-pricing-table-2.html">Pricing Table 2</a></li>
+                    <li>
+                        <a  href="pages-search-result.html">Search Result</a></li>
+                    <li>
+                        <a  href="pages-mailing.html">Mailing</a></li>
+                    <li>
+                        <a href="#">Error Pages</a>
+                        <ul>
+                            <li><a href="pages-errors-404.html" target="_blank">404</a></li>
+                            <li><a href="pages-errors-503.html" target="_blank">503</a></li>
+                            <li><a href="pages-errors-mean-at-work.html" target="_blank">Mean at Work</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a  href="pages-blank-page-1.html">Starter Pages</a>
+                        <ul>
+                            <li>
+                                <a  href="pages-blank-page-1.html">Layout 1</a></li>
+                            <li>
+                                <a  href="pages-blank-page-2.html">Layout 2</a></li>
+                            <li>
+                                <a  href="pages-blank-page-3.html">Layout 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Menu Level</a>
+                        <ul>
+                            <li>
+                                <a href="#">Menu Level</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Menu Level </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+</div>

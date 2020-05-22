@@ -3,10 +3,8 @@ module.exports = function(_, passport){
 
     return{
         SetRouting: function(router){
-            router.get('/',this.indexPage);
-            
+            router.get('/',this.indexPage); 
             router.get('/signup', this.getSignUp);
-            router.get('/home', this.homePage);
             router.get('/login', this.loginPage);
             router.get('/auth/facebook', this.getFacebookLogin);
             router.get('/auth/facebook/callback', 
@@ -35,6 +33,7 @@ module.exports = function(_, passport){
                 failureRedirect: '/login',
                 failureFlash: true
             }));
+            
     
         },
         
@@ -58,7 +57,7 @@ module.exports = function(_, passport){
         getGoogleLogin: passport.authenticate('google', {
             scope: ['https://www.googleapis.com/auth/plus.login',
             'https://www.googleapis.com/auth/plus.profile.emails.read'] 
-        }),
+        })
 
         
 
@@ -70,9 +69,7 @@ module.exports = function(_, passport){
         
 
        
-        homePage: function(req, res){
-            return res.render('home');
-        }
+       
 
 
 

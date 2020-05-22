@@ -4,7 +4,13 @@ const container = dependable.container();
 
 const simpleDependecies = [
     ['_' , 'lodash'],
-    ['passport','passport']
+    ['passport','passport'],
+    ['formidable', 'formidable'],
+    ['async','async'],
+    ['Room','./models/room'],
+    ['Users', './models/user.js'],
+    ['Group','./models/groupmessage.js'],
+    ['aws', './helpers/AWSUpload']
 ];
 
 simpleDependecies.forEach(function(val){
@@ -15,6 +21,7 @@ simpleDependecies.forEach(function(val){
 
 container.load(path.join(__dirname,'/controllers'));
 container.load(path.join(__dirname,'/helpers'));
+
 
 container.register('container',function() {
     return container;

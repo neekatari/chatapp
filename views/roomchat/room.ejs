@@ -1,0 +1,980 @@
+
+
+<!-- Mirrored from primex.laborasyon.com/demos/vertical/dark/apps-chat.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 04:49:55 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hashchat - Room</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../assets/media/image/favicon.png"/>
+
+    <!-- Plugin styles -->
+    <link rel="stylesheet" href="../../vendors/bundle.css" type="text/css">
+
+    
+    <!-- App styles -->
+    <link rel="stylesheet" href="../../assets/css/app.min.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js"></script>
+</head>
+<body  class="stretch-layout small-navigation dark">
+
+<!-- begin::preloader-->
+<div class="preloader">
+    <div class="preloader-icon"></div>
+</div>
+<!-- end::preloader -->
+
+<!-- begin::header -->
+<%- include ('../partials/navbar.ejs') %>
+<!-- end::header -->
+
+<!-- begin::main -->
+<div id="main">
+
+    <!-- begin::navigation -->
+   
+    <!-- end::navigation -->
+
+    <!--<div class="horizontal-navigation">
+            <ul>
+                <li>
+                    <a  href="#">
+                        <i class="nav-icon" data-feather="bar-chart-2"></i> Dashboards
+                    </a>
+                    <ul>
+                        <li>
+                            <a  href="dashboards-one.html">Ecommerce</a></li>
+                        <li>
+                            <a  href="dashboards-two.html">Analytics</a></li>
+                        <li>
+                            <a  href="dashboards-three.html">Projects</a></li>
+                        <li>
+                            <a  href="dashboards-widget.html">Widgets</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a  class="active"  href="#">
+                        <i class="nav-icon" data-feather="command"></i> Apps  <span class="badge badge-danger">New</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a  class="active"
+                                href="apps-chat.html">
+                                <span>Chat</span>
+                                <span class="badge badge-danger">5</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="apps-inbox.html">
+                                <span>Mail</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="apps-todo.html">
+                                <span>Todo</span>
+                                <span class="badge badge-warning">2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="apps-file-manager.html">
+                                <span>File Manager</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="apps-calendar.html">
+                                <span>Calendar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="nav-icon" data-feather="layers"></i> UI Elements
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">Basic</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-basic-alert.html">Alerts</a></li>
+                                <li>
+                                    <a  href="elements-basic-accordion.html">Accordion</a></li>
+                                <li>
+                                    <a  href="elements-basic-buttons.html">Buttons</a></li>
+                                <li>
+                                    <a  href="elements-basic-dropdown.html">Dropdown</a></li>
+                                <li>
+                                    <a  href="elements-basic-list-group.html">List Group</a></li>
+                                <li>
+                                    <a  href="elements-basic-pagination.html">Pagination</a></li>
+                                <li>
+                                    <a  href="elements-basic-typography.html">Typography</a></li>
+                                <li>
+                                    <a  href="elements-basic-media-object.html">Media Object</a></li>
+                                <li>
+                                    <a  href="elements-basic-progress.html">Progress</a></li>
+                                <li>
+                                    <a  href="elements-basic-modal.html">Modal</a></li>
+                                <li>
+                                    <a  href="elements-basic-spinners.html">Spinners</a></li>
+                                <li>
+                                    <a  href="elements-basic-navs.html">Navs</a></li>
+                                <li>
+                                    <a  href="elements-basic-tab.html">Tab</a></li>
+                                <li>
+                                    <a  href="elements-basic-tooltip.html">Tooltip</a></li>
+                                <li>
+                                    <a  href="elements-basic-popovers.html">Popovers</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Cards</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-card-basic.html">Basic Cards </a></li>
+                                <li>
+                                    <a  href="elements-card-image.html">Image Cards </a></li>
+                                <li>
+                                    <a  href="elements-card-scroll.html">Card Scroll </a></li>
+                                <li>
+                                    <a  href="elements-card-other.html">Others </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a  href="elements-avatar.html">Avatar</a></li>
+                        <li>
+                            <a  href="elements-icons.html">Icons</a></li>
+                        <li>
+                            <a  href="elements-colors.html">Colors</a></li>
+                        <li>
+                            <a href="#">Plugins</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-plugin-sweet-alert.html">Sweet Alert</a></li>
+                                <li>
+                                    <a  href="elements-plugin-lightbox.html">Lightbox</a></li>
+                                <li>
+                                    <a  href="elements-plugin-toast.html">Toast</a></li>
+                                <li>
+                                    <a  href="elements-plugin-tour.html">Tour</a></li>
+                                <li>
+                                    <a  href="elements-plugin-slick-slide.html">Slick Slide</a></li>
+                                <li>
+                                    <a  href="elements-plugin-nestable.html">Nestable</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Forms</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-form-basic.html">Form Layouts</a></li>
+                                <li>
+                                    <a  href="elements-form-custom.html">Custom Forms</a></li>
+                                <li>
+                                    <a  href="elements-form-advanced.html">Advanced Form</a></li>
+                                <li>
+                                    <a  href="elements-form-validation.html">Validation</a></li>
+                                <li>
+                                    <a  href="elements-form-wizard.html">Wizard</a></li>
+                                <li>
+                                    <a  href="elements-form-file-upload.html">File Upload</a></li>
+                                <li>
+                                    <a  href="elements-form-datepicker.html">Datepicker</a></li>
+                                <li>
+                                    <a  href="elements-form-timepicker.html">Timepicker</a></li>
+                                <li>
+                                    <a  href="elements-form-colorpicker.html">Colorpicker</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Tables</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-table-basic.html">Basic Tables</a></li>
+                                <li>
+                                    <a  href="elements-table-datatable.html">Datatable</a></li>
+                                <li>
+                                    <a  href="elements-table-responsive.html">Responsive Tables</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Charts</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-chart-apexchart.html">Apex</a></li>
+                                <li>
+                                    <a  href="elements-chart-chartjs.html">Chartjs</a></li>
+                                <li>
+                                    <a  href="elements-chart-justgage.html">Justgage</a></li>
+                                <li>
+                                    <a  href="elements-chart-morsis.html">Morsis</a></li>
+                                <li>
+                                    <a  href="elements-chart-peity.html">Peity</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Maps</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-map-google.html">Google</a></li>
+                                <li>
+                                    <a  href="elements-map-vector.html">Vector</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="nav-icon" data-feather="copy"></i> Pages
+                    </a>
+                    <ul>
+                        <li><a href="pages-login.html" target="_blank">Login</a></li>
+                        <li><a href="pages-register.html" target="_blank">Register</a></li>
+                        <li><a href="pages-recovery-password.html" target="_blank">Recovery Password</a></li>
+                        <li><a href="pages-lock-screen.html" target="_blank">Lock Screen</a></li>
+                        <li>
+                            <a  href="pages-profile.html">Profile</a></li>
+                        <li>
+                            <a  href="pages-timeline.html">Timeline</a></li>
+                        <li>
+                            <a  href="pages-invoice.html">Invoice</a></li>
+
+                        <li>
+                            <a  href="pages-pricing-table.html">Pricing Table</a></li>
+
+                        <li>
+                            <a  href="pages-pricing-table.html-2">Pricing Table 2</a></li>
+                        <li>
+                            <a  href="pages-search-result.html">Search Result</a></li>
+                        <li>
+                            <a  href="pages-mailing.html">Mailing</a></li>
+                        <li>
+                            <a href="#">Error Pages</a>
+                            <ul>
+                                <li><a href="pages-errors-404.html" target="_blank">404</a></li>
+                                <li><a href="pages-errors-503.html" target="_blank">503</a></li>
+                                <li><a href="pages-errors-mean-at-work.html" target="_blank">Mean at Work</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a  href="pages-blank-page-1.html">Starter Pages</a>
+                            <ul>
+                                <li>
+                                    <a  href="pages-blank-page-1.html">Layout 1</a></li>
+                                <li>
+                                    <a  href="pages-blank-page-2.html">Layout 2</a></li>
+                                <li>
+                                    <a  href="pages-blank-page-3.html">Layout 3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Menu Level</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Menu Level</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Menu Level </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div> -->
+
+    <!-- begin::main-content -->
+    <div class="main-content">
+
+    
+    <div class="row no-gutters chat-block">
+
+        <!-- begin::chat sidebar -->
+        <div class="col-lg-3 chat-sidebar border-right">
+
+            <!-- begin::chat sidebar search -->
+            <div class="chat-sidebar-header">
+                <div class="d-flex">
+                    <div class="pr-3">
+                        <div class="avatar">
+                            <img src="../../assets/media/image/user/women_avatar1.jpg" class="rounded-circle"
+                                 alt="image">
+                        </div>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Roxana Roussell</h6>
+                        <div class="m-0 small text-muted">Team Leader</div>
+                    </div>
+                    <div class="ml-auto">
+                        <div class="dropdown">
+                            <a href="#" data-toggle="dropdown">
+                                <i class="width-18 height-18" data-toggle="tooltip" title="Settings"
+                                   data-feather="settings"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">View Profile</a>
+                                <a class="dropdown-item" href="#">Edit Profile</a>
+                                <a class="dropdown-item" href="#">Add status</a>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Chat search">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-light" type="button">
+                                <i class="ti-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+               
+            </div>
+            <!-- begin::chat sidebar search -->
+
+            <!-- end::chat list -->
+            <div class="chat-sidebar-content" style="margin-top: -30px;">
+                <div class="tab-content pt-3" id="pills-tabContent">
+                    
+
+
+                    
+                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+                                <i data-feather="plus"></i> &nbsp; Create Hashtag
+                              </button>
+                              
+                              <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                
+                                 <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLongTitle">Create Room</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="container"> 
+                                                <form action="/home" method="post">
+                                                    <input type="text" class="form-control" name="room" id="" placeholder="Room Name">
+                                                    <br/>
+                                                    <input type="text" class="form-control" name="description" id="" placeholder="Description">
+                                                    <br/>
+                                                    <!-- <button class="btn btn-secondary upload-btn" type="button">Upload File</button> -->
+                                                    <!-- <input type="file" class="btn btn-primary" name="upload" id="upload-input" style="display: none;"/>  -->
+                                                    
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-primary">Add Room</button>
+                                                      </div>
+                                                </form>
+                                                </div>
+                                            
+                                        </div>
+                                    </div>
+                                   
+                                  </div>
+                                
+                              
+                            
+                             
+                            
+                           
+                            
+                        </div>
+                    </div>
+                        
+
+
+
+
+
+                    
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                         aria-labelledby="pills-home-tab">
+                        <p class="small mb-0">Recent chats</p>
+                        <div class="chat-lists">
+                            <div class="list-group list-group-flush">
+                                <a href="#"
+                                   class="list-group-item d-flex align-items-center link-1 pl-0 pr-0 pb-3 pt-3">
+                                    <div class="pr-3">
+                                            <i data-feather="hash"></i>   
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Natale Janu</h6>
+                                       
+                                    </div>
+                                    <div class="text-right ml-auto">
+                                        <span class="badge badge-primary badge-pill ml-auto">3</span>
+                                        <span class="small text-muted">08:27 PM</span>
+                                    </div>
+                                </a>
+                                <a href="#"
+                                   class="list-group-item d-flex align-items-center link-1 pl-0 pr-0 pb-3 pt-3">
+                                    <div class="pr-3">
+                                            <i data-feather="hash"></i>   
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Natale Janu</h6>
+                                       
+                                    </div>
+                                    <div class="text-right ml-auto">
+                                        <span class="badge badge-primary badge-pill ml-auto">3</span>
+                                        <span class="small text-muted">08:27 PM</span>
+                                    </div>
+                                </a>
+                                <a href="#"
+                                class="list-group-item d-flex align-items-center link-1 pl-0 pr-0 pb-3 pt-3">
+                                 <div class="pr-3">
+                                         <i data-feather="hash"></i>   
+                                 </div>
+                                 <div>
+                                     <h6 class="mb-1">Natale Janu</h6>
+                                    
+                                 </div>
+                                 <div class="text-right ml-auto">
+                                     <!-- <span class="badge badge-primary badge-pill ml-auto">3</span> -->
+                                     <span class="small text-muted">08:27 PM</span>
+                                 </div>
+                             </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                         aria-labelledby="pills-profile-tab">
+                        <div class="list-group list-group-flush">
+                            <a href="#" class="list-group-item d-flex pl-0 pr-0 pb-3 pt-3">
+                                <div class="pr-3">
+                                    <div class="avatar avatar-state-warning">
+                                        <img src="../../assets/media/image/user/women_avatar2.jpg"
+                                             class="rounded-circle"
+                                             alt="image">
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1">Orelie Rockhall</h6>
+                                    <div class="small text-muted d-flex align-items-center">
+                                        <i class="width-15 height-15 mr-1 text-danger"
+                                           data-feather="arrow-down-left"></i>
+                                        Today, 03:11 AM
+                                    </div>
+                                </div>
+                                <div class="text-right ml-auto">
+                                    <i class="text-danger width-18 height-18" data-feather="video"></i>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item d-flex align-items-center pl-0 pr-0 pb-3 pt-3">
+                                <div class="pr-3">
+                                    <div class="avatar avatar-state-success">
+                                        <img src="../../assets/media/image/user/man_avatar1.jpg"
+                                             class="rounded-circle"
+                                             alt="image">
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Barbette Bolf</h6>
+                                    <div class="small text-muted d-flex align-items-center">
+                                        <i class="width-15 height-15 mr-1 text-success"
+                                           data-feather="arrow-up-right"></i>
+                                        Today, 03:11 AM
+                                    </div>
+                                </div>
+                                <div class="text-right ml-auto">
+                                    <i class="width-18 height-18 text-success"
+                                       data-feather="phone-call"></i>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item d-flex pl-0 pr-0 pb-3 pt-3">
+                                <div class="pr-3">
+                                    <div class="avatar avatar-state-warning">
+                                        <img src="../../assets/media/image/user/women_avatar1.jpg"
+                                             class="rounded-circle"
+                                             alt="image">
+                                    </div>
+                                </div>
+                                <div class="flex-grow- 1">
+                                    <h6 class="mb-1">Natale Janu</h6>
+                                    <div class="small text-muted d-flex align-items-center">
+                                        <i class="width-15 height-15 mr-1 text-success"
+                                           data-feather="arrow-up-right"></i>
+                                        Today, 03:11 AM
+                                    </div>
+                                </div>
+                                <div class="text-right ml-auto">
+                                    <i class="width-18 height-18 text-success" data-feather="video"></i>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item d-flex align-items-center pl-0 pr-0 pb-3 pt-3">
+                                <div class="pr-3">
+                                    <div class="avatar avatar-state-secondary">
+                                        <span class="avatar-title bg-info rounded-circle">T</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Terra Fehner</h6>
+                                    <div class="small text-muted d-flex align-items-center">
+                                        <i class="width-15 height-15 mr-1 text-danger"
+                                           data-feather="arrow-down-left"></i>
+                                        Today, 03:11 AM
+                                    </div>
+                                </div>
+                                <div class="text-right ml-auto">
+                                    <i class="width-18 height-18 text-danger" data-feather="video"></i>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item d-flex pl-0 pr-0 pb-3 pt-3">
+                                <div class="pr-3">
+                                    <div class="avatar avatar-state-info">
+                                        <img src="../../assets/media/image/user/women_avatar2.jpg"
+                                             class="rounded-circle"
+                                             alt="image">
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1">Orelie Rockhall</h6>
+                                    <div class="small text-muted d-flex align-items-center">
+                                        <i class="width-15 height-15 mr-1 text-success"
+                                           data-feather="arrow-up-right"></i>
+                                        Today, 03:11 AM
+                                    </div>
+                                </div>
+                                <div class="text-right ml-auto">
+                                    <i class="width-18 height-18 text-success"
+                                       data-feather="phone-call"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                         aria-labelledby="pills-contact-tab">
+                        <p class="small mb-0">142 Contacts</p>
+                        <div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-center pl-0 pr-0 pb-3 pt-3">
+                                    <div class="pr-3">
+                                        <div class="avatar avatar-state-danger">
+                                            <span class="avatar-title bg-success rounded-circle">A</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Alene Ranyelld</h6>
+                                        <div class="small text-muted">United Kingdom</div>
+                                    </div>
+                                    <div class="text-right ml-auto">
+                                        <a href="#" class="p-1">
+                                            <i data-feather="phone-call" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="message-circle" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="video" class="width-18 height-18"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center pl-0 pr-0 pb-3 pt-3">
+                                    <div class="pr-3">
+                                        <div class="avatar avatar-state-success">
+                                            <img src="../../assets/media/image/user/man_avatar1.jpg"
+                                                 class="rounded-circle"
+                                                 alt="image">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Chloette Fewster</h6>
+                                        <div class="small text-muted">Estonia</div>
+                                    </div>
+                                    <div class="text-right ml-auto">
+                                        <a href="#" class="p-1">
+                                            <i data-feather="phone-call" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="message-circle" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="video" class="width-18 height-18"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center pl-0 pr-0 pb-3 pt-3">
+                                    <div class="pr-3">
+                                        <div class="avatar avatar-state-warning">
+                                            <img src="../../assets/media/image/user/women_avatar1.jpg"
+                                                 class="rounded-circle"
+                                                 alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow- 1">
+                                        <h6 class="mb-1">Stephanus Shergill</h6>
+                                        <div class="small text-muted">Austria</div>
+                                    </div>
+                                    <div class="text-right ml-auto">
+                                        <a href="#" class="p-1">
+                                            <i data-feather="phone-call" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="message-circle" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="video" class="width-18 height-18"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center pl-0 pr-0 pb-3 pt-3">
+                                    <div class="pr-3">
+                                        <div class="avatar avatar-state-info">
+                                            <img src="../../assets/media/image/user/women_avatar2.jpg"
+                                                 class="rounded-circle"
+                                                 alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Elvyn Frowde</h6>
+                                        <div class="small text-muted">Canada</div>
+                                    </div>
+                                    <div class="text-right ml-auto">
+                                        <a href="#" class="p-1">
+                                            <i data-feather="phone-call" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="message-circle" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="video" class="width-18 height-18"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center pl-0 pr-0 pb-3 pt-3">
+                                    <div class="pr-3">
+                                        <div class="avatar avatar-state-secondary">
+                                            <span class="avatar-title bg-success rounded-circle">A</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Alene Ranyelld</h6>
+                                        <div class="small text-muted">Canada</div>
+                                    </div>
+                                    <div class="text-right ml-auto">
+                                        <a href="#" class="p-1">
+                                            <i data-feather="phone-call" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="message-circle" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="video" class="width-18 height-18"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center pl-0 pr-0 pb-3 pt-3">
+                                    <div class="pr-3">
+                                        <div class="avatar avatar-state-success">
+                                            <img src="../../assets/media/image/user/man_avatar1.jpg"
+                                                 class="rounded-circle"
+                                                 alt="image">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Chloette Fewster</h6>
+                                        <div class="small text-muted">Spain</div>
+                                    </div>
+                                    <div class="text-right ml-auto">
+                                        <a href="#" class="p-1">
+                                            <i data-feather="phone-call" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="message-circle" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="video" class="width-18 height-18"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center pl-0 pr-0 pb-3 pt-3">
+                                    <div class="pr-3">
+                                        <div class="avatar avatar-state-danger">
+                                            <img src="../../assets/media/image/user/women_avatar1.jpg"
+                                                 class="rounded-circle"
+                                                 alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow- 1">
+                                        <h6 class="mb-1">Stephanus Shergill</h6>
+                                        <div class="small text-muted">Romania</div>
+                                    </div>
+                                    <div class="text-right ml-auto">
+                                        <a href="#" class="p-1">
+                                            <i data-feather="phone-call" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="message-circle" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="video" class="width-18 height-18"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center pl-0 pr-0 pb-3 pt-3">
+                                    <div class="pr-3">
+                                        <div class="avatar avatar-state-warning">
+                                            <img src="../../assets/media/image/user/women_avatar2.jpg"
+                                                 class="rounded-circle"
+                                                 alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Elvyn Frowde</h6>
+                                        <div class="small text-muted">New Zealand</div>
+                                    </div>
+                                    <div class="text-right ml-auto">
+                                        <a href="#" class="p-1">
+                                            <i data-feather="phone-call" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="message-circle" class="width-18 height-18"></i>
+                                        </a>
+                                        <a href="#" class="p-1">
+                                            <i data-feather="video" class="width-18 height-18"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end::chat list -->
+
+        </div>
+        <!-- end::chat sidebar -->
+
+        <!-- begin::chat content -->
+        <div class="col-md-6 chat-content">
+
+            <!-- begin::chat header -->
+            <!-- <div class="chat-header border-bottom">
+                <div class="d-flex align-items-center">
+                    <div class="pr-3">
+                        <div class="avatar avatar-state-warning">
+                            <img src="../../assets/media/image/user/women_avatar2.jpg" class="rounded-circle"
+                                 alt="image">
+                        </div>
+                    </div>
+                    <div>
+                        <h6 class="mb-1">Orelie Rockhall</h6>
+                        <div class="m-0 small text-success">typing...</div>
+                    </div>
+                    <div class="ml-auto">
+                        <ul class="nav align-items-center">
+                            <li class="mr-4 d-sm-inline d-none">
+                                <a href="#" title="Start Video Call" data-toggle="tooltip">
+                                    <i data-feather="video" class="width-18 height-18"></i>
+                                </a>
+                            </li>
+                            <li class="mr-4 d-sm-inline d-none">
+                                <a href="#" title="Start Voice Call" data-toggle="tooltip">
+                                    <i data-feather="phone-call" class="width-18 height-18"></i>
+                                </a>
+                            </li>
+                            <li class="d-sm-inline d-none">
+                                <a href="#" title="Add to Contact" data-toggle="tooltip">
+                                    <i data-feather="user-plus" class="width-18 height-18"></i>
+                                </a>
+                            </li>
+                            <li class="ml-4 mobile-chat-close-btn">
+                                <a href="#" class="btn btn-sm btn-danger">
+                                    <i data-feather="x" class="width-18 height-18"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+            <!-- end::chat header -->
+
+            <!-- begin::messages -->
+            <div class="messages">
+                <div id="message-item" class="col-md-12">
+                    <% _.forEach(groupMsg, function(val) { %>
+                        <% if(roomName === val.name){ %>
+                    <div class="d-flex col-md-12 alert alert-primary">
+                        <div class="pr-3">
+                            <div class="avatar avatar-state-success">
+                                <img src="../../assets/media/image/user/women_avatar2.jpg" class="rounded-circle"
+                                     alt="image">
+                            </div>
+                        </div>
+                        <div>
+                            <h6 class=" message-item-content"><%= val.sender.username%></h6>
+                            <div class="m-0 large"><%= val.body%></div>
+                        </div>
+                        <!-- <div style="height:2px; width:100%; background-color: white;"></div> -->
+                    </div>
+                        <% } %>
+                    <% }) %>
+                </div>
+                <script id="message-template" type="text/template">
+                    <div class="d-flex col-md-12 alert alert-primary">
+                        <div class="pr-3">
+                            <div class="avatar avatar-state-success">
+                                <img src="../../assets/media/image/user/women_avatar2.jpg" class="rounded-circle"
+                                     alt="image">
+                            </div>
+                        </div>
+                        <div>
+                            <h6 class=" message-item-content">{{ sender }}</h6>
+                            <div class="m-0 large"> {{ text }} </div>
+                        </div>
+                        <!-- <div style="height:2px; width:100%; background-color: white;"></div> -->
+                    </div>
+                   
+               
+                </script>
+
+
+
+                
+            </div>
+            <!-- end::messages -->
+
+            <!-- begin::chat footer -->
+            <div class="chat-footer border-top">
+                <form class="d-flex" id="message-form" method="post">
+                   
+                    <div class="flex-grow-1">
+                        <input type="hidden" id="roomName" name="roomName" value="<%= roomName %>">
+                        <input type="hidden" id="sender" name="sender" value="<%= user.username || user.fullname %>">
+
+                        <input type="text" class="form-control" name="message" id="msg" placeholder="Write your message">
+                    </div>
+                    <div class="chat-footer-buttons d-flex">
+                        <button class="btn btn-primary" type="submit">
+                            <i data-feather="send" class="width-15 height-15"></i>
+                        </button>
+                        <button class="btn btn-outline-light" type="button" title="Attach files"
+                                data-toggle="tooltip">
+                            <i data-feather="paperclip" class="width-15 height-15"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- end::chat footer -->
+
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="card-title">Online Users <span class="badge badge-primary badge-pill ml-auto" id="numValue" ></span></h6>
+                        <div>
+                            <a href="#" class="js-card-refresh">
+                                <i class="fa fa-refresh"></i>
+                            </a>
+                            <div class="dropdown ml-2">
+                                <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="#" class="dropdown-item">Action</a>
+                                    <a href="#" class="dropdown-item">Another action</a>
+                                    <a href="#" class="dropdown-item">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush card-scroll" style="margin: -10px; height:500px;">
+                        <div id="users">
+                            
+
+                            <!-- online user list -->
+
+                        </div>
+                       
+                    </ul> 
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="name"></h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                             <form action="" method="get" id="add_friend">
+                                <input type="hidden" name="receiverName" id="receiverName" value="">
+                                <input type="hidden" name="sender-name" id="sender-name" value="<%= user.username || user.fullname %>">
+                                <button type="submit" id="friend-add" class="btn btn-light">
+                                    <i class="fa fa-user-plus"></i>&nbsp;&nbsp; Add friend
+                                </button>
+
+                                <a id="nameLink" class="btn btn-primary" href="/profile/<%= user.username%>">View Profile</a>
+                                
+                                <div id="myTest">
+
+                                </div>
+                             </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- begin::chat content -->
+
+    </div>
+
+
+    <!-- begin::footer -->
+    <footer>
+        <div class="container-fluid">
+            <div>© 2020 Hashchat - <a href="http://laborasyon.com/" target="_blank">PVT | LTD</a></div>
+            <div>
+                <nav class="nav">
+                    <a href="https://themeforest.net/licenses/standard" class="nav-link">Licenses</a>
+                    <a href="#" class="nav-link">Change Log</a>
+                    <a href="#" class="nav-link">Get Help</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <!-- end::footer -->
+
+    </div>
+    <!-- end::main-content -->
+
+</div>
+
+
+<!-- end::main -->
+
+<!-- Plugin scripts -->
+<script src="../../vendors/bundle.js"></script>
+
+
+<!-- App scripts -->
+<script src="../../assets/js/app.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/room/roomchat.js"></script>
+<script src="/js/room/sendrequest.js"></script>
+
+</body>
+
+<!-- Mirrored from primex.laborasyon.com/demos/vertical/dark/apps-chat.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 04:49:56 GMT -->
+

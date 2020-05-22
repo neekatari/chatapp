@@ -1,1 +1,923 @@
-<h1>Home page</h1>
+
+
+<!-- Mirrored from primex.laborasyon.com/demos/vertical/dark/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 04:48:40 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Home</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../HLOGO.png"/>
+
+    <!-- Plugin styles -->
+    <link rel="stylesheet" href="../vendors/bundle.css" type="text/css">
+
+    
+    <!-- Slick -->
+    <link rel="stylesheet" href="../vendors/slick/slick.css" type="text/css">
+    <link rel="stylesheet" href="../vendors/slick/slick-theme.css" type="text/css">
+
+    <!-- Daterangepicker -->
+    <link rel="stylesheet" href="../vendors/datepicker/daterangepicker.css" type="text/css">
+
+    <!-- DataTable -->
+    <link rel="stylesheet" href="../vendors/dataTable/datatables.min.css" type="text/css">
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="../assets/css/app.min.css" type="text/css">
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.js"
+    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body  class="dark">
+
+<!-- begin::preloader-->
+<div class="preloader">
+   
+</div>
+<!-- end::preloader -->
+
+<!-- begin::header -->
+<%- include ('partials/navbar.ejs') %>
+<!-- end::header -->
+
+<!-- begin::main -->
+<div id="main">
+
+    <!-- begin::navigation -->
+  
+    <!-- end::navigation -->
+
+    <!--<div class="horizontal-navigation">
+            <ul>
+                <li>
+                    <a  class="active"
+                        href="#">
+                        <i class="nav-icon" data-feather="bar-chart-2"></i> Dashboards
+                    </a>
+                    <ul>
+                        <li>
+                            <a  class="active"
+                                href="dashboards-one.html">Ecommerce</a></li>
+                        <li>
+                            <a  href="dashboards-two.html">Analytics</a></li>
+                        <li>
+                            <a  href="dashboards-three.html">Projects</a></li>
+                        <li>
+                            <a  href="dashboards-widget.html">Widgets</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a  href="#">
+                        <i class="nav-icon" data-feather="command"></i> Apps  <span class="badge badge-danger">New</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a  href="apps-chat.html">
+                                <span>Chat</span>
+                                <span class="badge badge-danger">5</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="apps-inbox.html">
+                                <span>Mail</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="apps-todo.html">
+                                <span>Todo</span>
+                                <span class="badge badge-warning">2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="apps-file-manager.html">
+                                <span>File Manager</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="apps-calendar.html">
+                                <span>Calendar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="nav-icon" data-feather="layers"></i> UI Elements
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">Basic</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-basic-alert.html">Alerts</a></li>
+                                <li>
+                                    <a  href="elements-basic-accordion.html">Accordion</a></li>
+                                <li>
+                                    <a  href="elements-basic-buttons.html">Buttons</a></li>
+                                <li>
+                                    <a  href="elements-basic-dropdown.html">Dropdown</a></li>
+                                <li>
+                                    <a  href="elements-basic-list-group.html">List Group</a></li>
+                                <li>
+                                    <a  href="elements-basic-pagination.html">Pagination</a></li>
+                                <li>
+                                    <a  href="elements-basic-typography.html">Typography</a></li>
+                                <li>
+                                    <a  href="elements-basic-media-object.html">Media Object</a></li>
+                                <li>
+                                    <a  href="elements-basic-progress.html">Progress</a></li>
+                                <li>
+                                    <a  href="elements-basic-modal.html">Modal</a></li>
+                                <li>
+                                    <a  href="elements-basic-spinners.html">Spinners</a></li>
+                                <li>
+                                    <a  href="elements-basic-navs.html">Navs</a></li>
+                                <li>
+                                    <a  href="elements-basic-tab.html">Tab</a></li>
+                                <li>
+                                    <a  href="elements-basic-tooltip.html">Tooltip</a></li>
+                                <li>
+                                    <a  href="elements-basic-popovers.html">Popovers</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Cards</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-card-basic.html">Basic Cards </a></li>
+                                <li>
+                                    <a  href="elements-card-image.html">Image Cards </a></li>
+                                <li>
+                                    <a  href="elements-card-scroll.html">Card Scroll </a></li>
+                                <li>
+                                    <a  href="elements-card-other.html">Others </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a  href="elements-avatar.html">Avatar</a></li>
+                        <li>
+                            <a  href="elements-icons.html">Icons</a></li>
+                        <li>
+                            <a  href="elements-colors.html">Colors</a></li>
+                        <li>
+                            <a href="#">Plugins</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-plugin-sweet-alert.html">Sweet Alert</a></li>
+                                <li>
+                                    <a  href="elements-plugin-lightbox.html">Lightbox</a></li>
+                                <li>
+                                    <a  href="elements-plugin-toast.html">Toast</a></li>
+                                <li>
+                                    <a  href="elements-plugin-tour.html">Tour</a></li>
+                                <li>
+                                    <a  href="elements-plugin-slick-slide.html">Slick Slide</a></li>
+                                <li>
+                                    <a  href="elements-plugin-nestable.html">Nestable</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Forms</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-form-basic.html">Form Layouts</a></li>
+                                <li>
+                                    <a  href="elements-form-custom.html">Custom Forms</a></li>
+                                <li>
+                                    <a  href="elements-form-advanced.html">Advanced Form</a></li>
+                                <li>
+                                    <a  href="elements-form-validation.html">Validation</a></li>
+                                <li>
+                                    <a  href="elements-form-wizard.html">Wizard</a></li>
+                                <li>
+                                    <a  href="elements-form-file-upload.html">File Upload</a></li>
+                                <li>
+                                    <a  href="elements-form-datepicker.html">Datepicker</a></li>
+                                <li>
+                                    <a  href="elements-form-timepicker.html">Timepicker</a></li>
+                                <li>
+                                    <a  href="elements-form-colorpicker.html">Colorpicker</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Tables</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-table-basic.html">Basic Tables</a></li>
+                                <li>
+                                    <a  href="elements-table-datatable.html">Datatable</a></li>
+                                <li>
+                                    <a  href="elements-table-responsive.html">Responsive Tables</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Charts</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-chart-apexchart.html">Apex</a></li>
+                                <li>
+                                    <a  href="elements-chart-chartjs.html">Chartjs</a></li>
+                                <li>
+                                    <a  href="elements-chart-justgage.html">Justgage</a></li>
+                                <li>
+                                    <a  href="elements-chart-morsis.html">Morsis</a></li>
+                                <li>
+                                    <a  href="elements-chart-peity.html">Peity</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Maps</a>
+                            <ul>
+                                <li>
+                                    <a  href="elements-map-google.html">Google</a></li>
+                                <li>
+                                    <a  href="elements-map-vector.html">Vector</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="nav-icon" data-feather="copy"></i> Pages
+                    </a>
+                    <ul>
+                        <li><a href="pages-login.html" target="_blank">Login</a></li>
+                        <li><a href="pages-register.html" target="_blank">Register</a></li>
+                        <li><a href="pages-recovery-password.html" target="_blank">Recovery Password</a></li>
+                        <li><a href="pages-lock-screen.html" target="_blank">Lock Screen</a></li>
+                        <li>
+                            <a  href="pages-profile.html">Profile</a></li>
+                        <li>
+                            <a  href="pages-timeline.html">Timeline</a></li>
+                        <li>
+                            <a  href="pages-invoice.html">Invoice</a></li>
+
+                        <li>
+                            <a  href="pages-pricing-table.html">Pricing Table</a></li>
+
+                        <li>
+                            <a  href="pages-pricing-table.html-2">Pricing Table 2</a></li>
+                        <li>
+                            <a  href="pages-search-result.html">Search Result</a></li>
+                        <li>
+                            <a  href="pages-mailing.html">Mailing</a></li>
+                        <li>
+                            <a href="#">Error Pages</a>
+                            <ul>
+                                <li><a href="pages-errors-404.html" target="_blank">404</a></li>
+                                <li><a href="pages-errors-503.html" target="_blank">503</a></li>
+                                <li><a href="pages-errors-mean-at-work.html" target="_blank">Mean at Work</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a  href="pages-blank-page-1.html">Starter Pages</a>
+                            <ul>
+                                <li>
+                                    <a  href="pages-blank-page-1.html">Layout 1</a></li>
+                                <li>
+                                    <a  href="pages-blank-page-2.html">Layout 2</a></li>
+                                <li>
+                                    <a  href="pages-blank-page-3.html">Layout 3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Menu Level</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Menu Level</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Menu Level </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div> -->
+
+    <!-- begin::main-content -->
+    <div class="main-content">
+
+    
+   
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#exampleModalCenter">
+                        <i class="fa fa-plus"></i> 
+                      </button>
+                      
+                      <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        
+                         <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle">Create Room</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="d-flex justify-content-between">
+                                    <div class="container"> 
+                                        <form action="/home" method="post">
+                                            <input type="text" class="form-control" name="room" id="" placeholder="Room Name">
+                                            <br/>
+                                            <input type="text" class="form-control" name="description" id="" placeholder="Description">
+                                            <br/>
+                                            <button class="btn btn-secondary upload-btn" type="button">Upload File</button>
+                                            <input type="file" class="btn btn-primary" name="upload" id="upload-input" style="display: none;"/> 
+                                            
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Add Room</button>
+                                              </div>
+                                        </form>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                           
+                          </div>
+                        
+                        </div>
+                    
+                    </div>
+                    
+                      <script>
+                        $(document).ready(function() {
+                            $('.upload-btn').on('click',function(){
+                                $('#upload-input').click();
+                            });
+                        
+                            $('#upload-input').on('change', function(){
+                                var uploadInput = $('#upload-input');
+                        
+                                if(uploadInput.val() != ''){
+                                    var formData = new FormData();
+                        
+                                    formData.append('upload', uploadInput[0].files[0]);
+                        
+                                    $.ajax({
+                                        url: '/uploadFile',
+                                        type: 'POST',
+                                        data: formData,
+                                        processData: false,
+                                        contentType: false,
+                                        success: function(){
+                                            uploadInput.val('');
+                                        } 
+                                    })
+                                }
+                            })
+                        })
+                        </script>
+                    
+                   
+                    
+                </div>
+            </div>
+            <% if(first.length > 0){ %>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                   
+                    <h5 style="text-transform: uppercase;">Room suggestions</h5>
+                    <div class="slick-js">
+                       
+                        <% _.forEach(first, function(val){ %>
+                        <div class="">
+                            
+                            <div class="card bg-secondary-gradient border-0" style="height: 140px;">
+                                <div class="card-body text-center">
+                                    <h4 class="font-weight-bold mb-3"><%= val.name %></h4>
+                                    <h5 class="mb-0"><%= val.description %></h5>
+                                    <a href="/room/<%= val.name%>" class="btn-sm btn-dark" style="float: right; margin-top: 20px; margin-left: 50px;"> <i data-feather="plus"></i></a>
+                                </div>
+                            </div>
+                          
+                        </div>
+                   
+                    <% }) %>   
+                </div>
+                 
+                
+                
+            </div>
+           
+            <div class="row">
+                <div class="col-lg-12">
+                    <h5 style="text-transform: uppercase;">Room suggestions</h5>
+                  
+                        <% _.forEach(chunks, function(val){ %>
+                            <div class="row">
+                            <% _.forEach(val, function(val1){ %>
+
+                            <div class="card-group col-md-3  col-sm-6">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://hashchatapp.s3.amazonaws.com/<%= val1.image %>" />
+                                  <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with</p>
+                                  </div>
+                                  <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                  </div>
+                                </div>
+                            </div>   
+                            <% }) %>
+                           
+                        </div>
+                       
+                        <% }) %>
+                        
+                    </div>
+                   
+               
+                
+                
+            </div>
+            <% } else {%>
+                <h4>Welcome, You haven't created <b>room</b> yet </h4>
+            <% } %>
+
+
+            <!-- <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="card-title">Recent Orders</h6>
+                        <div>
+                            <a href="#" class="mr-3">
+                                <i class="fa fa-refresh"></i>
+                            </a>
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped mb-0 dataTable">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-left">Order ID</th>
+                                        <th>Product</th>
+                                        <th>Customer</th>
+                                        <th>Country</th>
+                                        <th>Date</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="#">#3132</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Apple iPhone XR 256GB red</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Nick Stone</a>
+                                        </td>
+                                        <td>
+                                            <img title="Italy" width="30"
+                                                 src="../../assets/media/image/flags/011-italy.png"
+                                                 alt="...">
+                                        </td>
+                                        <td>20 March 2019</td>
+                                        <td>$340.00</td>
+                                        <td>
+                                            <span class="badge badge-success">Success</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown">
+                                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Detail</a>
+                                                    <a href="#" class="dropdown-item text-danger">Remove</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#">#5211</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">ASUS Asus ROG Phone 8/128GB blue</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Milano Esco</a>
+                                        </td>
+                                        <td>
+                                            <img title="Kazakhstan" width="30"
+                                                 src="../../assets/media/image/flags/034-kazakhstan.png"
+                                                 alt="...">
+                                        </td>
+                                        <td>22 March 2019</td>
+                                        <td>$580.00</td>
+                                        <td>
+                                            <span class="badge badge-warning">Pending</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown">
+                                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Detail</a>
+                                                    <a href="#" class="dropdown-item text-danger">Remove</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#">#1032</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Samsung Galaxy A30 3/32GB blue</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Wiltor Noice</a>
+                                        </td>
+                                        <td>
+                                            <img title="Ethiopia" width="30"
+                                                 src="../../assets/media/image/flags/001-ethiopia.png"
+                                                 alt="...">
+                                        </td>
+                                        <td>10 May 2019</td>
+                                        <td>$150.00</td>
+                                        <td>
+                                            <span class="badge badge-danger">Cancel</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown">
+                                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Detail</a>
+                                                    <a href="#" class="dropdown-item text-danger">Remove</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#">#8320</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Samsung Galaxy Note9 6/128GB</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Anna Strong</a>
+                                        </td>
+                                        <td>
+                                            <img title="United Kingdom" width="30"
+                                                 src="../../assets/media/image/flags/262-united-kingdom.png"
+                                                 alt="...">
+                                        </td>
+                                        <td>02 May 2019</td>
+                                        <td>$19.00</td>
+                                        <td>
+                                            <span class="badge badge-success">Success</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown">
+                                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Detail</a>
+                                                    <a href="#" class="dropdown-item text-danger">Remove</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#">#3132</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Apple iPhone XR 256GB red</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Nick Stone</a>
+                                        </td>
+                                        <td>
+                                            <img title="Italy" width="30"
+                                                 src="../../assets/media/image/flags/011-italy.png"
+                                                 alt="...">
+                                        </td>
+                                        <td>20 March 2019</td>
+                                        <td>$340.00</td>
+                                        <td>
+                                            <span class="badge badge-warning">Pending</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown">
+                                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Detail</a>
+                                                    <a href="#" class="dropdown-item text-danger">Remove</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#">#5211</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">ASUS Asus ROG Phone 8/128GB blue</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Milano Esco</a>
+                                        </td>
+                                        <td>
+                                            <img title="Kazakhstan" width="30"
+                                                 src="../../assets/media/image/flags/034-kazakhstan.png"
+                                                 alt="...">
+                                        </td>
+                                        <td>22 March 2019</td>
+                                        <td>$580.00</td>
+                                        <td>
+                                            <span class="badge badge-success">Success</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown">
+                                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Detail</a>
+                                                    <a href="#" class="dropdown-item text-danger">Remove</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#">#1032</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Samsung Galaxy A30 3/32GB blue</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Wiltor Noice</a>
+                                        </td>
+                                        <td>
+                                            <img title="Ethiopia" width="30"
+                                                 src="../../assets/media/image/flags/001-ethiopia.png"
+                                                 alt="...">
+                                        </td>
+                                        <td>10 May 2019</td>
+                                        <td>$150.00</td>
+                                        <td>
+                                            <span class="badge badge-success">Success</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown">
+                                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Detail</a>
+                                                    <a href="#" class="dropdown-item text-danger">Remove</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#">#8320</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Samsung Galaxy Note9 6/128GB</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Anna Strong</a>
+                                        </td>
+                                        <td>
+                                            <img title="United Kingdom" width="30"
+                                                 src="../../assets/media/image/flags/262-united-kingdom.png"
+                                                 alt="...">
+                                        </td>
+                                        <td>02 May 2019</td>
+                                        <td>$19.00</td>
+                                        <td>
+                                            <span class="badge badge-danger">Cancel</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown">
+                                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Detail</a>
+                                                    <a href="#" class="dropdown-item text-danger">Remove</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h6 class="card-title">Hot Products</h6>
+                                <div>
+                                    <a href="#" class="mr-3">
+                                        <i class="fa fa-refresh"></i>
+                                    </a>
+                                    <span class="dropdown">
+                                        <a href="#" data-toggle="dropdown" aria-haspopup="true"
+                                           aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                        </a>
+                                        <span class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item">Report</a>
+                                            <a href="#" class="dropdown-item">Download</a>
+                                            <a href="#" class="dropdown-item">Close</a>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <canvas id="hot-products"></canvas>
+                            <div id="hot-products-legends"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h6 class="card-title">Revenue</h6>
+                                <div>
+                                    <a href="#" class="mr-3">
+                                        <i class="fa fa-refresh"></i>
+                                    </a>
+                                    <span class="dropdown">
+                                                <a href="#" data-toggle="dropdown" aria-haspopup="true"
+                                                   aria-expanded="false">
+                                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                </a>
+                                                <span class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Report</a>
+                                                    <a href="#" class="dropdown-item">Download</a>
+                                                    <a href="#" class="dropdown-item">Close</a>
+                                                </span>
+                                            </span>
+                                </div>
+                            </div>
+                            <div id="revenue"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+
+
+    <!-- begin::footer -->
+    <footer>
+        <div class="container-fluid">
+            <div>© 2020 HashChat - <a href="#" target="_blank">VISION PVT | LTD</a></div>
+            <div>
+                <nav class="nav">
+                    <a href="#" class="nav-link">Licenses</a>
+                    <a href="#" class="nav-link">Change Log</a>
+                    <a href="#" class="nav-link">Get Help</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <!-- end::footer -->
+
+    </div>
+    <!-- end::main-content -->
+
+</div>
+<!-- end::main -->
+
+<!-- Plugin scripts -->
+<script src="../vendors/bundle.js"></script>
+
+
+    <!-- Slick -->
+    <script src="../vendors/slick/slick.min.js"></script>
+
+    <!-- Chartjs -->
+    <script src="../vendors/charts/chartjs/chart.min.js"></script>
+
+    <!-- Apex chart -->
+    <!-- <script src="../../../../apexcharts.com/samples/assets/irregular-data-series.js"></script> -->
+    <script src="../vendors/charts/apex/apexcharts.min.js"></script>
+
+    <!-- Daterangepicker -->
+    <script src="../vendors/datepicker/daterangepicker.js"></script>
+
+    <!-- DataTable -->
+    <script src="../vendors/dataTable/datatables.min.js"></script>
+
+    <!-- Dashboard scripts -->
+    <script src="../assets/js/examples/dashboard.js"></script>
+
+    <!-- To use theme colors with Javascript -->
+    <div class="colors">
+        <div class="bg-primary"></div>
+        <div class="bg-primary-bright"></div>
+        <div class="bg-secondary"></div>
+        <div class="bg-secondary-bright"></div>
+        <div class="bg-info"></div>
+        <div class="bg-info-bright"></div>
+        <div class="bg-success"></div>
+        <div class="bg-success-bright"></div>
+        <div class="bg-danger"></div>
+        <div class="bg-danger-bright"></div>
+        <div class="bg-warning"></div>
+        <div class="bg-warning-bright"></div>
+    </div>
+
+    <script>
+        $(function () {
+            $('.slick-js').slick({
+                speed: 500,
+                arrows: false,
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 500,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+            $('input[name="daterangepicker"]').daterangepicker({
+                opens: 'left'
+            });
+
+           
+        })
+    </script>
+
+
+<!-- App scripts -->
+<script src="../assets/js/app.min.js"></script>
+
+</body>
+
+
