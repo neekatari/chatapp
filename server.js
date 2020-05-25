@@ -70,6 +70,11 @@ container.resolve(function(users, _, admin, mainAdmin, home, room, profile){
         app.use(passport.initialize());
         app.use(passport.session());
         app.locals._ = _;
+        app.locals.stringSlice = (str,a,b) => {
+            var stringgg = str.slice(a,b).trim();
+            //console.log('crop string ::::::::::',stringgg);
+            return stringgg;
+        } 
     }
 
 });

@@ -13,9 +13,9 @@ const router = express.Router();
  * PROFILE IMAGE STORING STARTS
  */
 const s3 = new aws.S3({
- accessKeyId: 'ASIATSB762EB2L2N7FVP',
- secretAccessKey: '8DE36a6mJmHKtBUTfLyfhs7dFR4SqiHqPlgEuAxf',
- sessionToken : 'FwoGZXIvYXdzEBAaDGx8vD8JYKZU0ayRoyLDAVb1za9JFA7Nj993cBO5DC21QTdT8hpJNasR08h3NjEojs9nk6xTiwkd7oUiVn+rIiQ6PriVG0Q21TrZmKS4Lrd9QG//p/9evt1YdObng/OxsOnSoQsy550Tk/JfkU+FYRPCqtQ+Xd4YP2UEBZR/MwfkqmojxTxlsNw4gVCHdH3vJ48TH/GMNdx3vfHcj+6S6l5GT596GLgFNSl18axbrtc8C5fLXnbaGI7dAtSqsULPCKI3W2VR8ZMPsdY8e9JkTyUCIyj+7In0BTItIPQ+86AdRSvX4lSe5/mE4Rqwm4ILuGTiX+s4cV6gBJPJqYMq6fbEjM495xEe',
+ accessKeyId: 'ASIATSB762EBUI4LJEPH',
+ secretAccessKey: 'PN9miigd5q6SOwiU4Uzvyx6i/z/w0PLgwOfR7QOu',
+ sessionToken : 'FwoGZXIvYXdzED0aDB3hy8XQLHxY3lJb2yLDAV6VKD9nudlpwRSWKYugWXCBGbIRexHT71gHc3VqIys4aDfnGNW0ejjpNexfuC6k/Bc7Exz4QmqhwDOFwkHm+ckbymjvbmyArKvvPiPoJy28WyNM6F0uHNfuswmXnkDemhPa4CSy/U4JeFNE51TYB76W3XaCpVb7bigV/w6wxMRa0Nr7ol0HdTBUPr3ohHd4EcbsdrpTD7O1GRo8tVLauCI7M4Ys5iTpF7WV9PYXvz51cTxNlh0rkHkwBuWV3XZcbaUU1Cjr86z2BTItNrPrrCCWjb1IKeXT7krxJS9Dwf/sSXfg8l1chiQzB88uSWg5lSwJ2ZjyAWQ9',
  Bucket: 'hashchatapp'
 });
 /**

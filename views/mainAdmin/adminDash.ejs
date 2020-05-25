@@ -1,1 +1,425 @@
-    <h1>Welcome Admin</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primex - HTML & Laravel Admin Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../assets/media/image/favicon.png"/>
+
+    <!-- Plugin styles -->
+    <link rel="stylesheet" href="../../vendors/bundle.css" type="text/css">
+
+    
+    <!-- App styles -->
+    <link rel="stylesheet" href="../../assets/css/app.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+</head>
+<body  class="dark">
+
+<!-- begin::preloader-->
+<div class="preloader">
+    <div class="preloader-icon"></div>
+</div>
+<!-- end::preloader -->
+
+<!-- begin::header -->
+<div class="header">
+
+    <div class="header-left">
+        <div class="navigation-toggler">
+            <a href="#" data-action="navigation-toggler">
+                <i data-feather="menu"></i>
+            </a>
+        </div>
+        <div class="header-logo">
+            <a href=index-2.html>
+                <img class="logo" src="../HLOGO.jpg" alt="logo">
+                <img class="logo-light" src="../HLOGO.png" alt="light logo" height="50" width="50"> &nbsp;&nbsp; <p style="font-size: 22px; margin-top: 20px;">Hashchat</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="header-body">
+        <div class="header-body-left">
+            <div class="page-title">
+                <h4>Analytics</h4>
+            </div>
+        </div>
+        <div class="header-body-right">
+            <ul class="navbar-nav">
+
+                
+
+                <!-- begin::header fullscreen -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link" title="Fullscreen" data-toggle="fullscreen">
+                        <i class="maximize" data-feather="maximize"></i>
+                        <i class="minimize" data-feather="minimize"></i>
+                    </a>
+                </li>
+           
+
+                <!-- begin::user menu -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link" title="User menu" data-toggle="dropdown" aria-expanded="false" style="margin-top: 20px;">
+                        <span class="mr-2 d-sm-inline d-none">Welcome, Admin</span>
+                        <figure class="avatar avatar-sm">
+                            <img src="https://hashchatapp.s3.amazonaws.com/default.png" class="rounded-circle"
+                                 alt="avatar">
+                        </figure>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#" class="dropdown-item">Profile</a>
+                        <a href="#" class="dropdown-item d-flex">
+                            Followers <span class="text-muted ml-auto">214</span>
+                        </a>
+                        <a href="#" class="dropdown-item d-flex">
+                            Inbox <span class="text-muted ml-auto">18</span>
+                        </a>
+                        <a href="#" class="dropdown-item" data-sidebar-target="#settings">Billing</a>
+                        <a href="#" class="dropdown-item" data-sidebar-target="#settings">Need help?</a>
+                        <a href="#" class="dropdown-item text-danger" data-sidebar-target="#settings">Sign Out!</a>
+                    </div>
+                </li>
+                <!-- end::user menu -->
+
+            </ul>
+
+            <!-- begin::mobile header toggler -->
+            <ul class="navbar-nav d-flex align-items-center">
+                <li class="nav-item header-toggler">
+                    <a href="#" class="nav-link">
+                        <i data-feather="arrow-down"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- end::mobile header toggler -->
+        </div>
+    </div>
+
+</div>
+<!-- end::header -->
+
+<!-- begin::main -->
+<div id="main">
+
+    <!-- begin::navigation -->
+    <div class="navigation">
+        <div class="navigation-menu-tab">
+            <div class="flex-grow-1">
+                <ul>
+                    <li>
+                        <a  class="active"
+                            href="#" data-toggle="tooltip" data-placement="right" title="Dashboards"
+                           data-nav-target="#dashboards">
+                            <i data-feather="bar-chart-2"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="#" data-toggle="tooltip"
+                           data-placement="right" title="Apps" data-nav-target="#apps">
+                            <i data-feather="command"></i>
+                        </a>
+                    </li>
+                   
+                </ul>
+            </div>
+            <div>
+                <ul>
+                   
+                    <li>
+                        <a href="pages-login.html" data-toggle="tooltip" data-placement="right" title="Logout"
+                           target="_blank">
+                            <i data-feather="log-out"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      
+    </div>
+    <!-- end::navigation -->
+
+    <div class="main-content">
+
+  
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h2 class="font-weight-bold mb-2"><%= rooms.length%></h2>
+                                    <div>Total Rooms</div>
+                                </div>
+                                <div>
+                                    <span class="dashboard-pie-1">2/5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h2 class="font-weight-bold mb-2"><%= users.length%></h2>
+                                    <div>Total Users</div>
+                                </div>
+                                <div>
+                                    <span class="dashboard-pie-2">4/5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h2 class="font-weight-bold mb-2">8.765</h2>
+                                    <div>Total Conversions</div>
+                                </div>
+                                <div>
+                                    <span class="dashboard-pie-3">1/5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h2 class="font-weight-bold mb-2">68%</h2>
+                                    <div>Page Retention Rate</div>
+                                </div>
+                                <div>
+                                    <span class="dashboard-pie-4">2/5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <ul class="nav nav-pills flex-column flex-sm-row" id="myTab" role="tablist">
+                        <li class="flex-sm-fill text-sm-center nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home"
+                               role="tab" aria-selected="true">Users</a>
+                        </li>
+                       
+                        <!-- <li class="flex-sm-fill text-sm-center nav-item">
+                            <a class="nav-link" id="connections-tab1" data-toggle="tab" href="#connections"
+                               role="tab"
+                               aria-selected="false">
+                                Connections <span class="badge badge-light m-l-5">6</span>
+                            </a>
+                        </li> -->
+                        <li class="flex-sm-fill text-sm-center nav-item">
+                            <a class="nav-link" id="earnings-tab" data-toggle="tab" href="#earnings" role="tab"
+                               aria-selected="false">Rooms</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title">Earnings</h6>
+                            <div class="table-responsive">
+                                <table id="example" class="table table-hover">
+                                    <thead class="thead-light">
+                                    <tr>
+                                        <th>DP</th>
+                                        <th>User Name</th>
+                                        <th>Total Friends</th>
+                                        <th>Options</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                            <% _.forEach(users, function(val) { %>
+
+                                    <tr>
+                                        <td>
+                                            <div class="pr-3">
+                                                <div class="avatar avatar-state-success">
+                                        <% if(stringSlice(val.userImage,0,5) != 'https' ){ %>
+
+                                                    <img src="https://hashchatapp.s3.amazonaws.com/<%= val.userImage%>" class="rounded-circle"
+                                                         alt="image">
+                                        <% } else { %>
+                                            <img src="<%= val.userImage%>" class="rounded-circle"
+                                                         alt="image">
+                                        <% } %>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><%=val.username%></td>
+                                        <td>
+                                            <%=val.friendList.length%>
+                                        </td>
+                                        <td>
+                                        <% if(val.status == 'a'){ %>
+                                            <a title="Deactivate" href="/deactivate/<%= val._id%>"><i class="fa fa-toggle-on" style="font-size: 22px; color: darkcyan;"></i></a>
+                                        <% } else { %>
+                                            <a title="Activate" href="/activate/<%= val._id%>"><i class="fa fa-toggle-off" style="font-size: 22px; color: crimson;"></i></a>
+                                        <%  } %>
+                                        </td>
+                                    </tr>
+                            <% }) %>
+                                   
+                                   
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+              
+                <div class="tab-pane fade" id="earnings" role="tabpanel">
+
+
+
+
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title">Earnings</h6>
+                            <div class="table-responsive">
+                                <table id="example1" class="table table-hover">
+                                    <thead class="thead-light">
+                                    <tr>
+                                        <th>DP</th>
+                                        <th>Room Name</th>
+                                        <th>Room owner</th>
+                                        <th>Options</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                            <% _.forEach(rooms, function(val) { %>
+
+                                    <tr>
+                                        <td>
+                                            <div class="pr-3">
+                                                <div class="avatar avatar-state-success">
+                                                    <img src="https://hashchatapp.s3.amazonaws.com/<%= val.image%>" class="rounded-circle"
+                                                         alt="image">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><a href=""><%=val.name%></a></td>
+                                        <td>
+                                            <%=val.owner.username%>
+                                        </td>
+                                        <td>
+                                            <% if(val.status == 'a'){ %>
+                                              
+                                                <a title="Deactivate" href="/deactivateRoom/<%= val._id%>"><i class="fa fa-toggle-on" style="font-size: 22px; color: darkcyan;"></i></a>
+                                            <% } else { %>
+                                                <a title="Activate" href="/activateRoom/<%= val._id%>"><i class="fa fa-toggle-off" style="font-size: 22px; color: crimson;"></i></a>
+                                            <%  } %>
+                                        </td>
+                                    </tr>
+                            <% }) %>
+                                   
+                                   
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
+        </div>
+    </div>
+
+
+    <!-- begin::footer -->
+    <footer>
+        <div class="container-fluid">
+            <div>© 2020 Hahschat - </div>
+            <div>
+                <nav class="nav">
+                    <a href="https://themeforest.net/licenses/standard" class="nav-link">Licenses</a>
+                    <a href="#" class="nav-link">Change Log</a>
+                    <a href="#" class="nav-link">Get Help</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <!-- end::footer -->
+
+    </div>
+    <!-- end::main-content -->
+
+</div>
+<!-- end::main -->
+
+<!-- Plugin scripts -->
+<script src="../../vendors/bundle.js"></script>
+
+
+    <!-- Apex chart -->
+    <script src="../../vendors/charts/apex/apexcharts.min.js"></script>
+
+    <!-- Chartjs -->
+    <script src="../../vendors/charts/chartjs/chart.min.js"></script>
+
+    <!-- Circle progress -->
+    <script src="../../vendors/circle-progress/circle-progress.min.js"></script>
+
+    <!-- Datepicker -->
+    <script src="../../vendors/datepicker/daterangepicker.js"></script>
+
+    <!-- Peity -->
+    <script src="../../vendors/charts/peity/jquery.peity.min.js"></script>
+    <script src="../../assets/js/examples/charts/peity.js"></script>
+
+    <!-- Dashboard scripts -->
+    <script src="../../assets/js/examples/dashboard.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    $('#example').DataTable();
+} );
+$(document).ready(function() {
+    $('#example1').DataTable();
+} );
+    </script>
+    <div class="colors"> <!-- To use theme colors with Javascript -->
+        <div class="bg-primary"></div>
+        <div class="bg-primary-bright"></div>
+        <div class="bg-secondary"></div>
+        <div class="bg-secondary-bright"></div>
+        <div class="bg-info"></div>
+        <div class="bg-info-bright"></div>
+        <div class="bg-success"></div>
+        <div class="bg-success-bright"></div>
+        <div class="bg-danger"></div>
+        <div class="bg-danger-bright"></div>
+        <div class="bg-warning"></div>
+        <div class="bg-warning-bright"></div>
+    </div>
+
+
+<!-- App scripts -->
+<script src="../../assets/js/app.min.js"></script>
+
+</body>
+

@@ -3,6 +3,7 @@
 const passport = require('passport');
 const User = require('../models/user');
 const LocalStrategy = require('passport-local').Strategy;
+const Admin = require('../models/admin');
 
 passport.serializeUser((user, done) => {
     done(null, user.id);
@@ -129,25 +130,25 @@ passport.use('local.login', new LocalStrategy({
 // }));
 
 
-// passport.use('admin.login', new LocalStrategy({
-//     usernameField: 'email',
-//     passwordField: 'password',
-//     passReqToCallback: true
-// }, function (req, email, password, done) {
-//     Admin.findOne({'email': email}, function (err, user) {
-//         if (err) {
-//             return done(err);
-//         }
-//         if (!user) {
-//             return done(null, false, {message: 'No user found.'});
-//         }
-//         if (password != "admin") {
-//             return done(null, false, {message: 'Wrong password.'});
-//         }
-//         return done(null, user);
-//     });
+passport.use('admin.login', new LocalStrategy({
+    usernameField: 'email',
+    passwordField: 'password',
+    passReqToCallback: true
+}, function (req, email, password, done) {
+    Admin.findOne({'email': email}, function (err, user) {
+        if (err) {
+            return done(err);
+        }
+        if (!user) {
+            return done(null, false, {message: 'No user found.'});
+        }
+        if (password != "admin") {
+            return done(null, false, {message: 'Wrong password.'});
+        }
+        return done(null, user);
+    });
     
-// }));
+}));
 
 
 

@@ -10,6 +10,7 @@ module.exports = function(async, Room, _, Users, Group){
             var resultfriendreq = [];
             async.parallel([
                 function(callback){
+                    console.log("sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",req.user._id);
                     Room.find({'owner': req.user._id}, (err, result) => {
                         callback(err, result);
                     })
